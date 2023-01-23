@@ -2,6 +2,8 @@
 
 **Developer: Adam Giles**
 
+[Live website](https://mini-tales-project.herokuapp.com/)
+
 ## Table of Content
 
 - [Project Goals](#project-goals)

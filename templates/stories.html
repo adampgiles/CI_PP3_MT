@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Tales - Explore Tales</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Explore Tales</h2>
+
     {% for story in stories %}
-        {{ story.story_title}}<br>
-        {{ story.story_author}}<br>
-        {{ story.story_topic}}<br>
-        {{ story.story_content}}<br>
-        {{ story.story_publish_date}}<br>
-        {{ story.story_likes}}<br>
-        {{ story.story_views}}<br>
+        <p>Title: </p>{{story.story_title}}<br>
+        <p>Author: </p>{{story.story_author}}<br>
+        <p>Topic: </p>{{story.story_topic}}<br>
+        <p>Content: </p>{{story.story_content}}<br>
+        <p>Publish Date: </p>{{story.story_publish_date}}<br>
+        <p>Likes: </p>{{story.story_likes}}<br>
+        <p>Views: </p>{{story.story_views}}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}

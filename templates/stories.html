@@ -3,14 +3,25 @@
 
     <h2>Explore Tales</h2>
 
-    {% for story in stories %}
-        <p>Title: </p>{{story.story_title}}<br>
-        <p>Author: </p>{{story.story_author}}<br>
-        <p>Topic: </p>{{story.story_topic}}<br>
-        <p>Content: </p>{{story.story_content}}<br>
-        <p>Publish Date: </p>{{story.story_publish_date}}<br>
-        <p>Likes: </p>{{story.story_likes}}<br>
-        <p>Views: </p>{{story.story_views}}<br>
-    {% endfor %}
+    <div class="story-block">
+        {% for story in stories %}
+
+        <div class="story-block-top">
+            <div class="story-title-publish">
+                <div class="story-title">{{story.story_title}}</div>
+                <div class="story-publish-date">Published: {{story.story_publish_date}}</div>
+            </div>
+            <div class="story-topic">{{story.story_topic}}</div>
+        </div>
+
+        <div class="story-block-middle">{{story.story_blurb}}</div>
+
+        <div class="story-block-bottom">
+            <div class="story-author">{{story.story_author}}</div>
+            <div class="story-views">{{story.story_views}}</div>
+            <div class="story-likes">{{story.story_likes}}</div>
+        </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}

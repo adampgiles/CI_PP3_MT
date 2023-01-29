@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="navigation-bar">
+    <ul>
+        <li><a href="{{ url_for( 'get_stories') }}">Explore Tales</a></li>
+        <li><a href="#Inspiration">Inspiration</a></li>
+        <li><a href="{{ url_for( 'register') }}">Log in</a></li>
+    </ul> 
+</div>
+
+    <h2>Register</h2>
+
+    <div class="register-form-section">
+        <form class="register-form" method="POST" action="{{ url_for( 'register') }}">
+            <!-- Form instruction -->
+            <p>Register below to share your Tales with other Mini Tales users.</p>
+            <!-- Username -->
+            <div>
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required><br>
+            </div>
+            <!-- Email Address -->
+            <div>
+                <label for="email-address">Email Address</label><br>
+                <input type="email" id="email-address" name="email-address" required><br>
+            </div>
+            <!-- Password -->
+            <div>
+                <label for="password">Email Address</label><br>
+                <input type="password" id="password" name="password" required><br>
+            </div>
+            <!-- Confirm Password -->
+            <div>
+                <label for="confirm-password">Email Address</label><br>
+                <input type="password" id="confirm-password" name="confirm-password" required><br>
+            </div>
+        </form>
+    </div>
+{% endblock %}

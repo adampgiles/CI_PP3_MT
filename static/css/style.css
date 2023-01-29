@@ -9,16 +9,29 @@ body{
     text-align: center;
 }
 
+h1{
+    margin: auto;
+}
+
 h2{
+    margin: auto;
     font-size: 150%;
+}
+
+.story-list-section{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
 .story-block{
     display: flex;    
     flex-direction: column;
+    justify-content: center;
     border: 2px solid black;
-    margin: auto;
-    height: 150px;
+    margin-bottom: 10px;
+    height: 250px;
     width: 300px;
     padding: 1px;
     background-color: white;    
@@ -28,7 +41,7 @@ h2{
     display: flex;   
     justify-content: start;  
     align-items: center;  
-    height: 25%;
+    height: 15%;
     margin: 1px;
 }
 .story-block-top div{
@@ -67,18 +80,19 @@ h2{
     display: flex;    
     justify-content: center;  
     align-items: center; 
-    height: 50%;
+    height: 75%;
     background-color: lightgrey;  
     border-radius: 2px;
+    padding: 2px;
     margin: 2px;
 }
 
 .story-block-bottom{
     display: flex;    
-    justify-content: center;  
+    justify-content: start;  
     align-items: center; 
     width: 100%;
-    height: 25%;     
+    height: 10%;     
     margin: 1px;
 }
 .story-block-bottom div{
@@ -100,10 +114,18 @@ h2{
     border-radius: 2px; 
     margin: 1px;
 }
+.story-views svg{
+    margin-right: 5px;
+}
+
 .story-likes{
     width: 25%;
     height: 100%; 
     background-color: lightgrey;  
     border-radius: 2px; 
-    margin: 1px;
+    margin-left: 1px;
+    margin-right: 3px;
+}
+.story-likes svg{
+    margin-right: 5px;
 }

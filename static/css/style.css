@@ -10,12 +10,28 @@ body{
 }
 
 h1{
-    margin: auto;
+    margin: 10px;    
+    font-weight: bold;
+}
+
+.navigation-bar ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border: 2px solid black;
+    border-width: 2px 0px 2px 0px;
+}
+.navigation-bar ul li{
+    margin: 0px 10px 0px 10px;
+}
+.navigation-bar ul li a{
+    color: blue;
 }
 
 h2{
-    margin: auto;
+    margin: 10px 0px 0px 0px;
     font-size: 150%;
+    font-weight: bold;
 }
 
 .story-list-section{

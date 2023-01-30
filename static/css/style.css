@@ -10,8 +10,9 @@ body{
 }
 
 h1{
-    margin: 10px;    
+    margin: 5px;    
     font-weight: bold;
+    font-size: 250%;
 }
 
 .navigation-bar ul{
@@ -19,13 +20,13 @@ h1{
     justify-content: space-around;
     background-color: white;
     border: 2px solid black;
-    border-width: 2px 0px 2px 0px;
-}
-.navigation-bar ul li{
-    margin: 0px 10px 0px 10px;
+    border-width: 2px 0px 2px 0px;    
+    list-style-type: none;
+    padding: 5px;
 }
 .navigation-bar ul li a{
     color: blue;
+    text-decoration: none;
 }
 
 h2{
@@ -46,11 +47,12 @@ h2{
     flex-direction: column;
     justify-content: center;
     border: 2px solid black;
+    border-radius: 5px;
     margin-bottom: 10px;
     height: 250px;
     width: 300px;
     padding: 1px;
-    background-color: white;    
+    background-color: lightskyblue;    
 }
 
 .story-block-top{
@@ -69,7 +71,7 @@ h2{
     display: flex;    
     flex-direction: column;
     width: 70%;
-    background-color: lightgrey;  
+    background-color: white;  
     border-radius: 2px;
     height: 100%;
     margin: 1px;
@@ -87,7 +89,7 @@ h2{
 .story-topic{ 
     width: 30%;
     height: 100%;
-    background-color: lightgrey;  
+    background-color: white;  
     border-radius: 2px;
     margin: 1px;
 }
@@ -97,7 +99,7 @@ h2{
     justify-content: center;  
     align-items: center; 
     height: 75%;
-    background-color: lightgrey;  
+    background-color: white;  
     border-radius: 2px;
     padding: 2px;
     margin: 2px;
@@ -119,14 +121,14 @@ h2{
 .story-author{ 
     width: 50%; 
     height: 100%;
-    background-color: lightgrey;  
+    background-color: white;  
     border-radius: 2px;
     margin: 1px;
 }
 .story-views{
     width: 25%;
     height: 100%; 
-    background-color: lightgrey;  
+    background-color: white;  
     border-radius: 2px; 
     margin: 1px;
 }
@@ -137,11 +139,45 @@ h2{
 .story-likes{
     width: 25%;
     height: 100%; 
-    background-color: lightgrey;  
+    background-color: white;  
     border-radius: 2px; 
     margin-left: 1px;
     margin-right: 3px;
 }
 .story-likes svg{
     margin-right: 5px;
+}
+
+.register-form-section{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+.register-form-section p{
+    margin: 10px;
+}
+.register-form-inputs{
+    margin: 5px;
+}
+.register-form-inputs input{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.register-form-section label{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+.register-form-submit input{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;;
+    margin: 10px;
 }

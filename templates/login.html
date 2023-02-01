@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="navigation-bar">
+    <ul>
+        <li><a href="{{ url_for( 'get_stories') }}">Explore Tales</a></li>
+        <li><a href="#Inspiration">Inspiration</a></li>
+        <li><a href="{{ url_for( 'register') }}">Log in</a></li>
+    </ul> 
+</div>
+
+    <h2>Log in</h2>
+
+    <div class="login-form-section">
+        <!-- Form instruction -->
+        <p>Log in to your account or <a href="{{ url_for( 'register') }}">register an account.</a></p>
+        <form class="login-form" method="POST" action="{{ url_for( 'login') }}">
+        <!-- Email Address -->
+        <label for="email-address">Email Address</label><br>
+        <div class="login-form-inputs">
+            <input type="email" id="email-address" name="email-address" required><br>
+        </div>
+        <!-- Password -->
+        <label for="password">Password</label><br>
+        <div class="login-form-inputs">
+            <input type="password" id="password" name="password" required><br>
+        </div>      
+        <div class="login-form-submit">
+            <input type="submit" id="login-submit" name="login-submit" value="Log in" required><br>
+        </div>
+        </form>
+    </div>
+{% endblock %}

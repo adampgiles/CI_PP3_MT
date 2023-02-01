@@ -23,6 +23,9 @@ def get_stories():
     stories = mongo.db.stories.find()
     return render_template("stories.html", stories=stories)
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    return render_template("login.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():

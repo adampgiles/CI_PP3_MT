@@ -14,15 +14,17 @@
         <!-- Form instruction -->
         <p>Log in to your account or <a href="{{ url_for( 'register') }}">register an account.</a></p>
         <form class="login-form" method="POST" action="{{ url_for( 'login') }}">
-        <!-- Email Address -->
-        <label for="email-address">Email Address</label><br>
-        <div class="login-form-inputs">
-            <input type="email" id="email-address" name="email-address" required><br>
+        <!-- Username -->
+        <label for="username">Username</label><br>
+        <div class="register-form-inputs">
+            <input type="text" id="username" name="username"
+            minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$"required><br>
         </div>
         <!-- Password -->
         <label for="password">Password</label><br>
         <div class="login-form-inputs">
-            <input type="password" id="password" name="password" required><br>
+            <input type="password" id="password" name="password"
+            minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$" required>
         </div>      
         <div class="login-form-submit">
             <input type="submit" id="login-submit" name="login-submit" value="Log in" required><br>

@@ -17,24 +17,15 @@
             <!-- Username -->
             <label for="username">Username</label><br>
             <div class="register-form-inputs">
-                <input type="text" id="username" name="username" required><br>
-            </div>
-            <!-- Email Address -->
-            <label for="email-address">Email Address</label><br>
-            <div class="register-form-inputs">
-                <input type="email" id="email-address" name="email-address" required><br>
+                <input type="text" id="username" name="username"
+                minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$"required><br>
             </div>
             <!-- Password -->
             <label for="password">Password</label><br>
             <div class="register-form-inputs">
-                <input type="password" id="password" name="password" required><br>
+                <input type="password" id="password" name="password"
+                minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$" required><br>
             </div>
-            <!-- Confirm Password -->
-            <label for="confirm-password">Confirm Password</label><br>
-            <div class="register-form-inputs">
-                <input type="password" id="confirm-password" name="confirm-password" required><br>
-            </div>
-            <!-- Confirm Password -->
             <div class="register-form-submit">
                 <input type="submit" id="register-submit" name="register-submit" value="Create an Account" required><br>
             </div>

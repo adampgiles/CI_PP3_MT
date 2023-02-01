@@ -10,8 +10,29 @@
     <title>Mini Tales</title>
 </head>
 <body>
-    <h1><a href="{{ url_for( 'get_stories') }}">Mini Tales</a></h1>
-    {% block content %}
-    {% endblock %}  
+    <header>
+        <h1><a href="{{ url_for( 'get_stories') }}">Mini Tales</a></h1>        
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}  
+    </main>
+    
+    <section>
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="flashes">
+                        <h4>{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
+    {% block scripts %}
+    {% endblock %}
 </body>
 </html>

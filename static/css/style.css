@@ -39,14 +39,14 @@ h2{
     font-weight: bold;
 }
 
-.story-list-section{
+.tale-list-section{
     display: flex;    
     flex-direction: column;
     align-items: center;
     padding: 10px;
 }
 
-.story-block{
+.tale-block{
     display: flex;    
     flex-direction: column;
     justify-content: center;
@@ -59,19 +59,19 @@ h2{
     background-color: lightskyblue;    
 }
 
-.story-block-top{
+.tale-block-top{
     display: flex;   
     justify-content: start;  
     align-items: center;  
     height: 15%;
     margin: 1px;
 }
-.story-block-top div{
+.tale-block-top div{
     display: flex;    
     justify-content: center;  
     align-items: center; 
 }
-.story-title-publish{
+.tale-title-publish{
     display: flex;    
     flex-direction: column;
     width: 70%;
@@ -80,17 +80,17 @@ h2{
     height: 100%;
     margin: 1px;
 }
-.story-title{
+.tale-title{
     font-weight: bold;
     width: 100%;
 }
-.story-publish-date{
+.tale-publish-date{
     font-style: italic;
     font-size: x-small;
     width: 100%;
     align-items: center; 
 }
-.story-topic{ 
+.tale-topic{ 
     width: 30%;
     height: 100%;
     background-color: white;  
@@ -98,7 +98,7 @@ h2{
     margin: 1px;
 }
 
-.story-block-middle{
+.tale-block-middle{
     display: flex;    
     justify-content: center;  
     align-items: center; 
@@ -109,7 +109,7 @@ h2{
     margin: 2px;
 }
 
-.story-block-bottom{
+.tale-block-bottom{
     display: flex;    
     justify-content: start;  
     align-items: center; 
@@ -117,30 +117,30 @@ h2{
     height: 10%;     
     margin: 1px;
 }
-.story-block-bottom div{
+.tale-block-bottom div{
     display: flex;    
     justify-content: center;  
     align-items: center; 
 }
-.story-author{ 
+.tale-author{ 
     width: 50%; 
     height: 100%;
     background-color: white;  
     border-radius: 2px;
     margin: 1px;
 }
-.story-views{
+.tale-views{
     width: 25%;
     height: 100%; 
     background-color: white;  
     border-radius: 2px; 
     margin: 1px;
 }
-.story-views svg{
+.tale-views svg{
     margin-right: 5px;
 }
 
-.story-likes{
+.tale-likes{
     width: 25%;
     height: 100%; 
     background-color: white;  
@@ -148,7 +148,7 @@ h2{
     margin-left: 1px;
     margin-right: 3px;
 }
-.story-likes svg{
+.tale-likes svg{
     margin-right: 5px;
 }
 

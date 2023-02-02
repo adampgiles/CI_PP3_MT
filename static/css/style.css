@@ -9,6 +9,17 @@ body{
     text-align: center;
 }
 
+.flashes{
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid black;
+    border-width: 2px 0px 2px 0px; 
+    margin: 2px 0px 2px 0px;
+}
+.flashes h4{
+    color: white;
+    padding: 2px;
+}
+
 h1{
     margin: 5px;    
     font-weight: bold;

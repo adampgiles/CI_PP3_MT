@@ -8,12 +8,12 @@
     </ul> 
 </div>
 
-    <h2>Explore Tales</h2>
+    <h2>{{ username }}'s Tales</h2>
+    <a href="#NewTale">Add a New Tale</a>
 
     <div class="tale-list-section">    
         {% for tale in tales %}
         <div class="tale-block">
-
             <div class="tale-block-top">
                 <div class="tale-title-publish">
                     <div class="tale-title">{{tale.tale_title}}</div>

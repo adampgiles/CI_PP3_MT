@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -71,6 +72,25 @@ def mytales(username):
     username = mongo.db.users.find_one({"username": session["user"]})["username"]
     tales = mongo.db.tales.find({"tale_author": session["user"]})    
     return render_template("mytales.html", username=username, tales=tales)
+
+@app.route("/newtale", methods=["GET", "POST"])
+def newtale():
+    date = datetime.now()
+    if request.method == "POST":
+        usertale = {
+            "tale_title": request.form.get("title"),
+            "tale_blurb": request.form.get("blurb"),
+            "tale_topic": request.form.get("topic"),
+            "tale_content": request.form.get("tale-content"),
+            "tale_likes": "0",
+            "tale_views": "0",
+            "tale_publish_date": date.strftime("%d/%m/%yyyy"),
+            "tale_author": session["user"]
+        }
+        mongo.db.tales.insert_one(usertale)
+        flash("Tale Shared Successfully!")
+        return redirect(url_for("mytales", username=session["user"]))
+    return render_template("newtale.html")    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="navigation-bar">
+    <ul>
+        <li><a href="{{ url_for( 'get_tales') }}">Explore Tales</a></li>
+        <li><a href="#Inspiration">Inspiration</a></li>
+        <li><a href="{{ url_for( 'register') }}">Log in</a></li>
+    </ul> 
+</div>
+
+    <h2>Log in</h2>
+
+    <div class="newtale-form-section">
+        <!-- Form instruction -->
+        <form class="newtale-form" method="POST" action="{{ url_for( 'newtale') }}">
+
+        <!-- Title -->
+        <label for="title">Tale Title</label><br>
+        <div class="newtale-form-inputs">
+            <input type="text" id="title" name="title"
+            minlength="3" maxlength="30" required><br>
+        </div>
+
+        <!-- Blurb -->
+        <label for="blurb">Tale Blurb</label><br>
+        <div class="newtale-form-inputs">
+            <input type="text" id="blurb" name="blurb"
+            minlength="3" maxlength="60" required><br>
+        </div>
+
+        <!-- Topic (ADD DROPDOWN) -->
+        <label for="topic">Tale Blurb</label><br>
+        <div class="newtale-form-inputs">
+            <select name="topic" id="topic">
+                <option value="Adventure">Adventure</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Horror">Horror</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Romance">Romance</option>
+                <option value="Crime">Crime</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Mystery">Mystery</option>
+              </select>
+        </div>
+
+        <!-- Tale Content -->
+        <label for="tale-content">Your Tale</label><br>
+        <div class="newtale-form-inputs">
+            <input type="text" id="tale-content" name="tale-content"
+            minlength="1" maxlength="6500" required><br>
+        </div>    
+
+        <div class="newtale-form-submit">
+            <input type="submit" id="newtale-submit" name="newtale-submit" value="Share Your Tale" required><br>
+        </div>
+        </form>
+    </div>
+{% endblock %}

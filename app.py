@@ -67,6 +67,12 @@ def login():
 
     return render_template("login.html")
 
+@app.route('/logout', methods=["GET","POST"])
+def logout():
+    session.pop(session["user"], None)
+    flash("Successfully Logged Out!")
+    return render_template("login.html")
+
 @app.route("/mytales/<username>", methods=["GET","POST"])
 def mytales(username):
     username = mongo.db.users.find_one({"username": session["user"]})["username"]

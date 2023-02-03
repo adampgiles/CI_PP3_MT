@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Log in</h2>
+    <h2>Share Your Tale</h2>
 
     <div class="newtale-form-section">
         <!-- Form instruction -->
-        <form class="newtale-form" method="POST" action="{{ url_for( 'newtale') }}">
-
+        <p>Complete the form below to Share Your Tale.</p>
+        <form class="newtale-form" method="POST" action="{{ url_for( 'newtale') }}">            
         <!-- Title -->
         <label for="title">Tale Title</label><br>
         <div class="newtale-form-inputs">
@@ -21,7 +21,7 @@
         </div>
 
         <!-- Topic (ADD DROPDOWN) -->
-        <label for="topic">Tale Blurb</label><br>
+        <label for="topic">Tale Topic</label><br>
         <div class="newtale-form-inputs">
             <select name="topic" id="topic">
                 <option value="Adventure">Adventure</option>
@@ -39,8 +39,8 @@
         <!-- Tale Content -->
         <label for="tale-content">Your Tale</label><br>
         <div class="newtale-form-inputs">
-            <input type="text" id="tale-content" name="tale-content"
-            minlength="1" maxlength="6500" required><br>
+            <textarea id="tale-content"  class="tale-content" name="tale-content" cols="30" rows="10"></textarea>
+            <!--<input type="text" id="tale-content" name="tale-content" minlength="1" maxlength="6500" required><br> -->
         </div>    
 
         <div class="newtale-form-submit">

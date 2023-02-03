@@ -230,3 +230,53 @@ h2{
     padding: 7.5px 15px 7.5px 15px;;
     margin: 10px;
 }
+
+
+.newtale-form-section{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+.newtale-form-section p{
+    margin: 10px;
+}
+.newtale-form-inputs{
+    margin: 5px;
+}
+.newtale-form-inputs input{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.newtale-form-inputs select{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.tale-content{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+    height: 600px;
+}
+.newtale-form-section label{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+.newtale-form-submit input{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;;
+    margin: 10px;
+}

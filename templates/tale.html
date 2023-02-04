@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="fulltale-block">
+<div class="fulltale-section"> 
+    <div class="fulltale-block">
         <div class="fulltale-publish-date">Published: {{tale.tale_publish_date}}</div>
         <div class="fulltale-title">
             <h2>{{tale.tale_title}}</h2>
             <div class="fulltale-author">By {{tale.tale_author}}</div>
-        </div>
+        </div>       
 
-        
-
-        
         <div class="fulltale-views-likes">
             <div class="fulltale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
             <div class="fulltale-likes"><i class="fa-solid fa-heart"></i>{{tale.tale_likes}}</div>
@@ -17,5 +15,6 @@
 
         <div class="fulltale-content">{{tale.tale_content}}</div>
 
-    </div>   
+    </div> 
+</div>   
 {% endblock %}

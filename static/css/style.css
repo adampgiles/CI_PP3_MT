@@ -281,12 +281,18 @@ h2{
     margin: 10px;
 }
 
-.fulltale-block{
+.fulltale-section{
     display: flex;    
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 10px;
+}
+
+.fulltale-block{
+    display: flex;    
+    flex-direction: column;
+    justify-content: start;
+    width: 300px;
 }
 .fulltale-title{    
     background-color: white;

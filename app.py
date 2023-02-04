@@ -96,7 +96,13 @@ def newtale():
         mongo.db.tales.insert_one(usertale)
         flash("Tale Shared Successfully!")
         return redirect(url_for("mytales", username=session["user"]))
-    return render_template("newtale.html")    
+    return render_template("newtale.html")   
+
+@app.route("/tale/<_id>", methods=["GET","POST"])
+def tale(_id):
+    _id = _id
+    tale = mongo.db.tales.find_one({"_id": ObjectId(_id)})    
+    return render_template("tale.html", _id=_id, tale=tale)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

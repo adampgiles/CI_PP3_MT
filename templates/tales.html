@@ -8,7 +8,7 @@
 
             <div class="tale-block-top">
                 <div class="tale-title-publish">
-                    <div class="tale-title">{{tale.tale_title}}</div>
+                    <div class="tale-title"><a href="{{ url_for( 'tale', _id=tale._id ) }}">{{tale.tale_title}}</a></div>
                     <div class="tale-publish-date">Published: {{tale.tale_publish_date}}</div>
                 </div>
                 <div class="tale-topic">{{tale.tale_topic}}</div>

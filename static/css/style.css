@@ -280,3 +280,64 @@ h2{
     padding: 7.5px 15px 7.5px 15px;;
     margin: 10px;
 }
+
+.fulltale-block{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.fulltale-title{    
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.fulltale-block h2{
+    margin: 0;
+}
+
+.fulltale-publish-date{
+    align-self: flex-end;
+    font-size: 75%;
+}
+
+.fulltale-views-likes{
+    display: flex;    
+    justify-content: space-around;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.fulltale-views-likes div{
+    margin: 5px 20px 5px 20px;
+}
+.fulltale-views{ 
+    border-radius: 2px; 
+    margin: 1px;
+}
+.fulltale-views svg{
+    margin-right: 5px;
+}
+
+.fulltale-likes{
+    border-radius: 2px; 
+    margin-left: 1px;
+    margin-right: 3px;
+}
+.fulltale-likes svg{
+    margin-right: 5px;
+}
+
+.fulltale-content{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}

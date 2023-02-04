@@ -88,9 +88,9 @@ def newtale():
             "tale_blurb": request.form.get("blurb"),
             "tale_topic": request.form.get("topic"),
             "tale_content": request.form.get("tale-content"),
-            "tale_likes": "0",
-            "tale_views": "0",
-            "tale_publish_date": date.strftime("%d/%m/%yyyy"),
+            "tale_likes": 0,
+            "tale_views": 0,
+            "tale_publish_date": date.strftime("%d/%m/%Y"),
             "tale_author": session["user"]
         }
         mongo.db.tales.insert_one(usertale)
@@ -101,7 +101,8 @@ def newtale():
 @app.route("/tale/<_id>", methods=["GET","POST"])
 def tale(_id):
     _id = _id
-    tale = mongo.db.tales.find_one({"_id": ObjectId(_id)})    
+    mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_views": 1}})
+    tale = mongo.db.tales.find_one({"_id": ObjectId(_id)})  
     return render_template("tale.html", _id=_id, tale=tale)
 
 if __name__ == "__main__":

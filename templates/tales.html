@@ -2,6 +2,35 @@
 {% block content %}
     <h2>Explore Tales</h2>
 
+    <div class="search-filter-block">
+        <form class="search-form" method="POST" action="{{ url_for( 'get_tales') }}">
+            <div class="search-bar">  
+                <label for="search-input">Search:</label>
+                <input type="text" id="search-input" name="search-input" minlength="3" maxlength="30" >
+            </div>        
+            <div class="topic-filter">
+                <label for="topic">Filter Topic:</label><br>
+                <div class="topic-filter">
+                    <select name="topic" id="topic">
+                        <option value="">- - -</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Mystery">Mystery</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search-form-submit">
+                <input type="submit" id="search-submit" name="search-submit" value="Search / Filter" required><br>
+            </div>
+        </form>
+    </div>
+
     <div class="tale-list-section">    
         {% for tale in tales %}
         <div class="tale-block">

@@ -435,3 +435,22 @@ h2{
 .delete-confirm a{
     color: red;
 }
+
+.search-form div{
+    margin: 5px;
+}
+
+.search-form input{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.search-form select{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}

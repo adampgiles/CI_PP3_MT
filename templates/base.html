@@ -16,7 +16,7 @@
         <div class="navigation-bar">
             <ul>
                 <li><a href="{{ url_for('get_tales') }}">Explore Tales</a></li>
-                {% if username is defined %}
+                {% if session["logged in"] %}
                 <li><a href="{{ url_for('mytales', username=session['user']) }}">My Tales</a></li>
                 <li><a href="{{ url_for('logout') }}">Log out</a></li>
                 {% else %}

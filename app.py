@@ -26,7 +26,6 @@ def get_tales():
     if session.get("logged_in") == True:
         liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
         session["liked"] = liked
-        print (type(liked[0]))
     return render_template("tales.html", tales=tales)
 
 @app.route("/register", methods=["GET", "POST"])
@@ -114,7 +113,6 @@ def tale(_id):
     if session.get("logged_in") == True: 
         liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
         session["liked"] = liked
-        print (liked)
     return render_template("tale.html", _id=_id, tale=tale)
 
 @app.route("/like_tale/<_id>", methods=["GET","POST"])

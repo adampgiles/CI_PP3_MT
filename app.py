@@ -103,7 +103,28 @@ def newtale():
         mongo.db.tales.insert_one(usertale)
         flash("Tale Shared Successfully!")
         return redirect(url_for("mytales", username=session["user"]))
-    return render_template("newtale.html")   
+    return render_template("newtale.html") 
+
+@app.route("/edittale/<_id>", methods=["GET","POST"])
+def edittale(_id): 
+    date = datetime.now()
+    _id = _id
+    tale = mongo.db.tales.find_one({"_id": ObjectId(_id)})
+    if request.method == "POST":
+        mongo.db.tales.update_one(
+            {"_id": ObjectId(_id)},
+            { "$set": {
+            "tale_title": request.form.get("title"),
+            "tale_blurb": request.form.get("blurb"),
+            "tale_topic": request.form.get("topic"),
+            "tale_content": request.form.get("tale-content"),
+            "tale_likes": 0,
+            "tale_views": 0,
+            "tale_publish_date": date.strftime("%d/%m/%Y")
+            }})
+        flash("Tale Edited Successfully!")
+        return redirect(url_for("mytales", username=session["user"]))
+    return render_template("edittale.html", _id=_id, tale=tale)   
 
 @app.route("/tale/<_id>", methods=["GET","POST"])
 def tale(_id):    

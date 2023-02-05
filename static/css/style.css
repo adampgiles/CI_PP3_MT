@@ -289,6 +289,47 @@ h2{
     margin: 10px;
 }
 
+.edittale-form-section{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+.edittale-form-section p{
+    margin: 10px;
+}
+.edittale-form-inputs{
+    margin: 5px;
+}
+.edittale-form-inputs input{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.edittale-form-inputs select{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.edittale-form-section label{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+.edittale-form-submit input{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;;
+    margin: 10px;
+}
+
 .fulltale-section{
     display: flex;    
     flex-direction: column;

@@ -6,6 +6,7 @@
     <div class="tale-list-section">    
         {% for tale in tales %}
         <div class="tale-block">
+            <a href="{{ url_for( 'edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
             <div class="tale-block-top">
                 <div class="tale-title-publish">
                     <div class="tale-title">{{tale.tale_title}}</div>

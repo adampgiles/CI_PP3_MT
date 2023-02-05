@@ -11,9 +11,19 @@
         <div class="fulltale-views-likes">
             <div class="fulltale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
             <div class="fulltale-likes">
-                <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
+                {% if session["logged_in"] %}
+                    {% if _id in session["liked"] %}
+                    <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
+                        <i class="fa-solid fa-heart liked"></i>{{tale.tale_likes}}
+                    </a>
+                    {% else %}
+                    <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
+                        <i class="fa-solid fa-heart"></i>{{tale.tale_likes}}
+                    </a>
+                    {% endif %}
+                {% else %}
                     <i class="fa-solid fa-heart"></i>{{tale.tale_likes}}
-                </a>
+                {% endif %}
             </div>
         </div>
 

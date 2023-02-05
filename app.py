@@ -23,7 +23,11 @@ mongo = PyMongo(app)
 @app.route("/get_tales")
 def get_tales():
     tales = mongo.db.tales.find()
-    return render_template("tales.html", tales=tales, )
+    if session.get("logged_in") == True:
+        liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
+        session["liked"] = liked
+        print (type(liked[0]))
+    return render_template("tales.html", tales=tales)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -44,7 +48,7 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        session["logged in"] = True
+        session["logged_in"] = True
         return redirect(url_for("mytales", username=session["user"]))
     return render_template("register.html")
 
@@ -58,7 +62,7 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    session["logged in"] = True
+                    session["logged_in"] = True
                     return redirect(url_for("mytales", username=session["user"]))
             else:
                 flash("Incorrect Username and/or Password")
@@ -72,7 +76,7 @@ def login():
 
 @app.route('/logout', methods=["GET","POST"])
 def logout():
-    session["logged in"] = False
+    session["logged_in"] = False
     session.clear()
     flash("Successfully Logged Out!")
     return render_template("login.html")
@@ -103,25 +107,29 @@ def newtale():
     return render_template("newtale.html")   
 
 @app.route("/tale/<_id>", methods=["GET","POST"])
-def tale(_id):
+def tale(_id):    
     _id = _id
     mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_views": 1}})
-    tale = mongo.db.tales.find_one({"_id": ObjectId(_id)})  
+    tale = mongo.db.tales.find_one({"_id": ObjectId(_id)}) 
+    if session.get("logged_in") == True: 
+        liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
+        session["liked"] = liked
+        print (liked)
     return render_template("tale.html", _id=_id, tale=tale)
 
 @app.route("/like_tale/<_id>", methods=["GET","POST"])
 def like_tale(_id): 
     _id = _id
     liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
-    print (liked)
     if _id in liked:
         mongo.db.users.update_one({"username": session["user"]},{ "$pull": {"liked_tales": _id}})
-        mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_likes": -1}})
-        print ("Removed Liked")
+        mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_likes": -1}})        
     else:
         mongo.db.users.update_one({"username": session["user"]},{ "$push": {"liked_tales": _id}})
         mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_likes": 1}})
-        print ("Added Liked")
+    liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
+    session["liked"] = liked
+    print (session["liked"])
     return redirect(request.referrer)
 
 if __name__ == "__main__":

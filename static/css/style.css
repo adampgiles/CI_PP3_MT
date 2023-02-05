@@ -95,6 +95,10 @@ h2{
     font-weight: bold;
     width: 100%;
 }
+.tale-title a{
+    text-decoration: underline;
+    color: black;
+}
 .tale-publish-date{
     font-style: italic;
     font-size: x-small;
@@ -158,6 +162,10 @@ h2{
     border-radius: 2px; 
     margin-left: 1px;
     margin-right: 3px;
+}
+.tale-likes a{
+    text-decoration: none;
+    color: black;
 }
 .tale-likes svg{
     margin-right: 5px;
@@ -337,8 +345,15 @@ h2{
     margin-left: 1px;
     margin-right: 3px;
 }
+.fulltale-likes a{
+    text-decoration: none;
+    color: black;
+}
 .fulltale-likes svg{
     margin-right: 5px;
+}
+.liked{
+    color: red;
 }
 
 .fulltale-content{

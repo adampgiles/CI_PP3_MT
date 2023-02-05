@@ -5,12 +5,12 @@
     <div class="search-filter-block">
         <form class="search-form" method="POST" action="{{ url_for( 'get_tales') }}">
             <div class="search-bar">  
-                <label for="search-input">Search:</label>
+                <label for="search-input">Search:</label><br>
                 <input type="text" id="search-input" name="search-input" minlength="3" maxlength="30" >
             </div>        
             <div class="topic-filter">
                 <label for="topic">Filter Topic:</label><br>
-                <div class="topic-filter">
+                <div>
                     <select name="topic" id="topic">
                         <option value="">""</option>
                         <option value="Adventure">Adventure</option>

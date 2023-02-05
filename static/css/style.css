@@ -439,8 +439,7 @@ h2{
 .search-form div{
     margin: 5px;
 }
-
-.search-form input{
+.search-bar input{
     border: 2px solid black;
     border-radius: 50px;
     background-color: white;
@@ -451,6 +450,13 @@ h2{
     border: 2px solid black;
     border-radius: 50px;
     background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.search-form-submit input{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: lightcyan;
     padding: 7.5px 15px 7.5px 15px;
     width: 300px;
 }

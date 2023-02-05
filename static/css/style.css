@@ -403,3 +403,35 @@ h2{
     border-radius: 5px;
     padding: 5px;
 }
+
+.delete-section{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+}
+.delete-section h2{
+    margin: 10px;
+}
+.delete-section p{
+    margin: 20px;
+    font-size: 125%;
+}
+.delete-choices div{
+    font-size: large;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    margin: 10px;
+}
+.delete-choices a{
+    text-decoration: none;
+}
+.delete-cancel a{
+    color: blue;
+}
+.delete-confirm a{
+    color: red;
+}

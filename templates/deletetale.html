@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="delete-section">
+    <h2>Delete Your Tale?</h2>
+
+    <p>Are you sure you want to<br>Delete your Tale?</p>
+
+    <div class="delete-choices">
+        <div class="delete-cancel"><a href="{{ url_for( 'edittale', _id=tale._id ) }}">No, Go Back!</a></div>
+        <div class="delete-confirm"><a href="{{ url_for( 'confirmdeletetale', _id=tale._id ) }}">Yes, Delete this Tale</a></div>
+    </div>  
+</div>
+
+{% endblock %}

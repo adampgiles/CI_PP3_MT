@@ -127,6 +127,20 @@ def edittale(_id):
         return redirect(url_for("mytales", username=session["user"]))
     return render_template("edittale.html", _id=_id, tale=tale)   
 
+@app.route("/deletetale/<_id>", methods=["GET","POST"])
+def deletetale(_id):
+    _id = _id
+    tale = mongo.db.tales.find_one({"_id": ObjectId(_id)}) 
+    return render_template("deletetale.html", _id=_id, tale=tale) 
+
+@app.route("/confirmdeletetale/<_id>", methods=["GET","POST"])
+def confirmdeletetale(_id): 
+    _id = _id
+    mongo.db.tales.delete_one({"_id": ObjectId(_id)})
+    mongo.db.users.update_many({"liked_tales": _id},{ "$pull": {"liked_tales": _id}})
+    flash("Tale Deleted Successfully!")
+    return redirect(url_for("mytales", username=session["user"]))   
+
 @app.route("/tale/<_id>", methods=["GET","POST"])
 def tale(_id):    
     _id = _id
@@ -149,7 +163,6 @@ def like_tale(_id):
         mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_likes": 1}})
     liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
     session["liked"] = liked
-    print (session["liked"])
     return redirect(request.referrer)
 
 if __name__ == "__main__":

@@ -122,6 +122,7 @@ def edittale(_id):
             "tale_views": 0,
             "tale_publish_date": date.strftime("%d/%m/%Y")
             }})
+        mongo.db.users.update_many({"liked_tales": _id},{ "$pull": {"liked_tales": _id}})
         flash("Tale Edited Successfully!")
         return redirect(url_for("mytales", username=session["user"]))
     return render_template("edittale.html", _id=_id, tale=tale)   

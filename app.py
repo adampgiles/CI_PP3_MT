@@ -20,12 +20,16 @@ mongo = PyMongo(app)
 
 @app.route("/")
 
-@app.route("/get_tales")
-def get_tales():
+@app.route("/get_tales", methods=["GET","POST"])
+def get_tales():    
     tales = mongo.db.tales.find()
     if session.get("logged_in") == True:
         liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
         session["liked"] = liked
+    if request.method == "POST":
+        search = request.form.get("search-input")
+        tales = mongo.db.tales.find({"tale_title": {"$regex": str(search), "$options" :'i'}})
+        return render_template("tales.html", tales=tales)
     return render_template("tales.html", tales=tales)
 
 @app.route("/register", methods=["GET", "POST"])

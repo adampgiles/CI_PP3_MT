@@ -28,7 +28,7 @@ def get_tales():
         session["liked"] = liked
     if request.method == "POST":
         search = request.form.get("search-input")
-        tales = mongo.db.tales.find({"tale_title": {"$regex": str(search), "$options" :'i'}})
+        tales = mongo.db.tales.find({"$text": { "$search": search }})
         return render_template("tales.html", tales=tales)
     return render_template("tales.html", tales=tales)
 

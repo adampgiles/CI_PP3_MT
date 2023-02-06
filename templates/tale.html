@@ -2,6 +2,11 @@
 {% block content %}
 <div class="fulltale-section"> 
     <div class="fulltale-block">
+        {% if session["logged_in"] %}
+            {% if tale.tale_author == session["user"] %}
+            <a class="edit-delete" href="{{ url_for( 'edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
+            {% endif %}
+        {% endif %}    
         <div class="fulltale-publish-date">Published: {{tale.tale_publish_date}}</div>
         <div class="fulltale-title">
             <h2>{{tale.tale_title}}</h2>

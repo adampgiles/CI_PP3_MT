@@ -75,7 +75,7 @@ h2{
     justify-content: start;  
     align-items: center;  
     height: 15%;
-    margin: 1px;
+    margin: 2px 1px 1px 1px;
 }
 .tale-block-top div{
     display: flex;    
@@ -239,7 +239,6 @@ h2{
     margin: 10px;
 }
 
-
 .newtale-form-section{
     display: flex;    
     flex-direction: column;
@@ -288,7 +287,9 @@ h2{
     padding: 7.5px 15px 7.5px 15px;;
     margin: 10px;
 }
-
+.edittale-form{
+    margin: 5px;
+}
 .edittale-form-section{
     display: flex;    
     flex-direction: column;
@@ -402,6 +403,19 @@ h2{
     border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
+}
+
+.edit-delete{
+    color: black;
+    font-weight: bold;
+    width: 50%;
+    float: right;
+    text-decoration: none;
+    padding: 2px;
+    margin: auto;
+    border: 2px solid black; 
+    border-radius: 2px;  
+    background-color: lightcyan;
 }
 
 .delete-section{

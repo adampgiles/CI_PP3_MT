@@ -6,10 +6,10 @@
     <div class="tale-list-section">    
         {% for tale in tales %}
         <div class="tale-block">
-            <a href="{{ url_for( 'edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
+            <a class="edit-delete" href="{{ url_for( 'edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
             <div class="tale-block-top">
                 <div class="tale-title-publish">
-                    <div class="tale-title">{{tale.tale_title}}</div>
+                    <div class="tale-title"><a href="{{ url_for( 'tale', _id=tale._id ) }}">{{tale.tale_title}}</a></div>
                     <div class="tale-publish-date">Published: {{tale.tale_publish_date}}</div>
                 </div>
                 <div class="tale-topic">{{tale.tale_topic}}</div>

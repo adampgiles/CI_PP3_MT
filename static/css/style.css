@@ -54,6 +54,7 @@ h2{
     display: flex;    
     flex-direction: column;
     align-items: center;
+    margin: auto;
     padding: 10px;
 }
 
@@ -68,6 +69,16 @@ h2{
     width: 300px;
     padding: 1px;
     background-color: lightskyblue;    
+}
+.edit-delete{
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    text-decoration: none;
+    padding: 2px;
+    border: 2px solid black; 
+    border-radius: 5px;  
+    background-color: lightcyan;
 }
 
 .tale-block-top{
@@ -294,9 +305,30 @@ h2{
     display: flex;    
     flex-direction: column;
     align-items: center;
+    width: 300px;
+    margin: auto;
 }
 .edittale-form-section p{
     margin: 10px;
+}
+
+.newtale-link{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+}
+.newtale-link a{    
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    padding: 2px;
+    margin: 5px;
+    border: 2px solid black; 
+    border-radius: 5px;  
+    background-color: lightcyan;
 }
 .edittale-form-inputs{
     margin: 5px;
@@ -403,19 +435,6 @@ h2{
     border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
-}
-
-.edit-delete{
-    color: black;
-    font-weight: bold;
-    width: 50%;
-    float: right;
-    text-decoration: none;
-    padding: 2px;
-    margin: auto;
-    border: 2px solid black; 
-    border-radius: 2px;  
-    background-color: lightcyan;
 }
 
 .delete-section{

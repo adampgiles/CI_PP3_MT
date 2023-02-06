@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
     <h2>{{ username }}'s Tales</h2>
-    <a href="{{ url_for( 'newtale') }}">Add a New Tale</a>
+    <div class="newtale-link">
+        <a  href="{{ url_for( 'newtale') }}">Add a New Tale</a>
+    </div>   
 
     <div class="tale-list-section">    
         {% for tale in tales %}

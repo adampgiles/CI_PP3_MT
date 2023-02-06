@@ -33,7 +33,7 @@
                 <div class="tale-author">{{tale.tale_author}}</div>
                 <div class="tale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
                 <div class="tale-likes"> 
-                    {% if session["logged_in"] %}
+                    {% if (session["logged_in"]) and (tale.tale_author != session["user"]) %}
                         {% if tale._id|string in session["liked"] %}
                         <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
                             <i class="fa-solid fa-heart liked"></i>{{tale.tale_likes}}

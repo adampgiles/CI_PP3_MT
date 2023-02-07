@@ -9,7 +9,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
-
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -22,6 +21,9 @@ mongo = PyMongo(app)
 
 @app.route("/get_tales", methods=["GET","POST"])
 def get_tales():    
+    """
+    This function displays all tales in the tales collection on the base template.
+    """
     tales = mongo.db.tales.find()
     if session.get("logged_in") == True:
         liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
@@ -34,6 +36,12 @@ def get_tales():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    This function registers an account for a user in the users database collection. 
+    Once registered the user is taken to their My Tales page and a login session is created.
+    The user is redirected back to the register page, if the username already exists.
+    The user's password is encrypted before storing in the users collection.
+    """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -57,6 +65,11 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    This function checks the user account exists and logs in the user if the username and password match.
+    The user is redirected to the login page, if the username and/or password are incorrect.
+    Once logged in the user is taken to their My Tales page and a login session is created.
+    """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -79,6 +92,11 @@ def login():
 
 @app.route('/logout', methods=["GET","POST"])
 def logout():
+    """
+    This function logs the user out of the site.
+    The login session is removed and the user is 
+    redirected to the login page.
+    """
     session["logged_in"] = False
     session.clear()
     flash("Successfully Logged Out!")
@@ -86,12 +104,20 @@ def logout():
 
 @app.route("/mytales/<username>", methods=["GET","POST"])
 def mytales(username):
+    """
+    This function displays all of the currently logged in user's tales in the tales collection on the base template.
+    """
     username = mongo.db.users.find_one({"username": session["user"]})["username"]
     tales = mongo.db.tales.find({"tale_author": session["user"]})    
     return render_template("mytales.html", username=username, tales=tales)
 
 @app.route("/newtale", methods=["GET", "POST"])
 def newtale():
+    """
+    This function displays a form that the user can use to submit a new tale to
+    the tales collection.
+    The user is redirected to their My Tales page, once submitted. 
+    """
     date = datetime.now()
     if request.method == "POST":
         usertale = {
@@ -111,6 +137,11 @@ def newtale():
 
 @app.route("/edittale/<_id>", methods=["GET","POST"])
 def edittale(_id): 
+    """
+    This function displays a pre-populated form that the user can use to edit one of their existing tales.
+    Changes will then update the existing tales collection document.
+    The user is redirected to their My Tales page, once changes are submitted. 
+    """
     date = datetime.now()
     _id = _id
     tale = mongo.db.tales.find_one({"_id": ObjectId(_id)})
@@ -133,12 +164,21 @@ def edittale(_id):
 
 @app.route("/deletetale/<_id>", methods=["GET","POST"])
 def deletetale(_id):
+    """
+    This function takes the user to a page where they can confirm if 
+    they are sure about deleting their existing tale.    
+    """
     _id = _id
     tale = mongo.db.tales.find_one({"_id": ObjectId(_id)}) 
     return render_template("deletetale.html", _id=_id, tale=tale) 
 
 @app.route("/confirmdeletetale/<_id>", methods=["GET","POST"])
 def confirmdeletetale(_id): 
+    """
+    This function deletes the user's existing tale,
+    removing the document from the collection.
+    The user is redirected to their My Tales page, once this change is actioned. 
+    """
     _id = _id
     mongo.db.tales.delete_one({"_id": ObjectId(_id)})
     mongo.db.users.update_many({"liked_tales": _id},{ "$pull": {"liked_tales": _id}})
@@ -146,7 +186,10 @@ def confirmdeletetale(_id):
     return redirect(url_for("mytales", username=session["user"]))   
 
 @app.route("/tale/<_id>", methods=["GET","POST"])
-def tale(_id):    
+def tale(_id): 
+    """
+    This function displays the full tale that was selected on the tales page.
+    """   
     _id = _id
     mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_views": 1}})
     tale = mongo.db.tales.find_one({"_id": ObjectId(_id)}) 
@@ -157,6 +200,12 @@ def tale(_id):
 
 @app.route("/like_tale/<_id>", methods=["GET","POST"])
 def like_tale(_id): 
+    """
+    This function allows the logged in user to increase/decrease
+    a tale's like count by a factor of 1. The tale's id is stored 
+    in the current user's collection document, to ensure the user can only
+    like a tale once.
+    """ 
     _id = _id
     liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
     if _id in liked:

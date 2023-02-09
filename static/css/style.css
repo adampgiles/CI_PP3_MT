@@ -4,10 +4,70 @@
     padding: 0;
     font-size: 100%;
 }
-body{
-    background-color: lightblue;
+
+body{        
+    background-color: white;
     text-align: center;
 }
+
+.page-container{
+    max-width: 1920px;
+    min-height: 100vh;
+    margin: auto;
+    background-color: lightblue;
+    border: solid black;
+    border-width: 0px 2px 0px 2px;
+}
+
+/* Header - Includes Site Logo and Navigation Bar */
+header{    
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    border: solid black;
+    border-width: 0px 0px 2px 0px;
+    padding: 5px;
+}
+.site-logo{
+    width: 50%;
+}
+h1{
+    margin: 0;    
+    padding: 5px;
+    float: left;
+    font-weight: bold;
+    font-size: 200%;
+}
+h1 a{
+    color: black;
+    text-decoration: none;
+}
+.navigation-bar{
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+}
+.navigation-bar ul{ 
+    width: 100%; 
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;       
+    list-style-type: none;
+}
+.navigation-bar ul li{   
+    display: inline-block;
+    margin: 0px 15px 0px 15px;
+    border-bottom: 3px solid black;      
+}
+.navigation-bar ul li a{
+    margin: auto;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
 
 .flashes{
     background-color: rgba(0, 0, 0, 0.4);
@@ -20,29 +80,9 @@ body{
     padding: 2px;
 }
 
-h1{
-    margin: 5px;    
-    font-weight: bold;
-    font-size: 250%;
-}
-h1 a{
-    color: black;
-    text-decoration: none;
-}
 
-.navigation-bar ul{
-    display: flex;
-    justify-content: space-around;
-    background-color: white;
-    border: 2px solid black;
-    border-width: 2px 0px 2px 0px;    
-    list-style-type: none;
-    padding: 5px;
-}
-.navigation-bar ul li a{
-    color: blue;
-    text-decoration: none;
-}
+
+
 
 h2{
     margin: 10px 0px 0px 0px;

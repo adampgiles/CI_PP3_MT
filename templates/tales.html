@@ -30,7 +30,7 @@
             <div class="tale-block-middle">{{tale.tale_blurb}}</div>
 
             <div class="tale-block-bottom">
-                <div class="tale-author">Author: {{tale.tale_author}}</div>
+                <div class="tale-author">{{tale.tale_author}}</div>
                 <div class="tale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
                 <div class="tale-likes"> 
                     {% if (session["logged_in"]) and (tale.tale_author != session["user"]) %}

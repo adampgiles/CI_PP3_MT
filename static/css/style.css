@@ -29,13 +29,15 @@ body{
 header{    
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;    
     background-color: white;
     border: solid black;
     border-width: 0px 0px 2px 0px;
     padding: 5px;
 }
 .site-logo{
-    width: 50%;
+    width: 20%;
+    flex-basis: 50%;
 }
 h1{
     margin: 0;    
@@ -138,7 +140,6 @@ h2{
     flex-wrap: wrap;
     justify-content: space-around;
     flex-basis: 33.333333%;
-    align-items: center;
     padding: 10px;
 }
 .tale-block{
@@ -562,3 +563,37 @@ h2{
     color: red;
 }
 
+@media only screen and (max-width: 600px) {
+    .site-logo{
+        width: 100%;
+        flex-basis: 100%;
+    }
+    h1{
+        margin: 0;    
+        padding: 5px;
+        float: none;
+        font-weight: bold;
+        font-size: 200%;
+    }
+    .navigation-bar{
+        width: 100%;
+    }
+    .navigation-bar ul{ 
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;       
+        list-style-type: none;
+    }
+    .navigation-bar ul li{ 
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2{
+        margin: 10px 0px 0px 10px;
+        font-size: 125%;
+        text-align: center;
+    }
+
+}

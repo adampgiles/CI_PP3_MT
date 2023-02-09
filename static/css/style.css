@@ -17,10 +17,11 @@ body{
 }
 
 .page-container{
-    max-width: 1920px;
+    background: url("/static/images/books_background.jpg") no-repeat center;
+    background-size: 25%;
+    background-repeat: repeat;    
     min-height: 100vh;
     margin: auto;
-    background-color: lightblue;
     border: solid black;
     border-width: 0px 2px 0px 2px;
 }
@@ -99,10 +100,16 @@ h1 a:hover {
 
 /* Page Titles */
 h2{
-    margin: 10px 0px 0px 40px;
+    width: 100%;
+    padding: 10px 0px 10px 20px;
     font-size: 160%;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 5px black;
+    border: solid black;
+    border-width: 0px 0px 2px 0px;
+    background: linear-gradient(0deg, #00000099 60%, #ffffff34 100%);
 }
 
 /* Explore Tales Search Bar */
@@ -110,13 +117,16 @@ h2{
     width: 100%;
     padding: 20px 0px 20px 0px;
     margin: 10px 0px 10px 0px;
-    background-color: rgba(0, 0, 0, 0.15);
+    text-shadow: 0 2px 5px black;
     border: solid black;
     border-width: 2px 0px 2px 0px;
+    background: linear-gradient(0deg, #00000099 60%, #ffffff34 100%);
 }
 .search-bar label{
     font-weight: bold;
-    font-size: 110%;    
+    font-size: 110%;   
+    color: white;
+    text-shadow: 0 -1px 2px black; 
 }
 .search-bar input{
     border: 2px solid black;
@@ -152,7 +162,8 @@ h2{
     height: 325px;
     width: 475px;
     padding: 4px;
-    background-color: transparent;    
+    background: linear-gradient(0deg, hwb(19 41% 30% / 0.9) 50%, hsla(27, 82%, 22%, 0.563) 100%); 
+    box-shadow: 0px 5px hsla(0, 0%, 0%, 0.5);
 }
 .edit-delete{
     color: black;
@@ -563,6 +574,12 @@ h2{
     color: red;
 }
 
+footer{
+    padding: 10px 0 10px 0;
+    border: solid rgba(0, 0, 0, 0.75);
+    border-width: 2px 0px 0px 0px;
+}
+
 @media only screen and (max-width: 600px) {
     .site-logo{
         width: 100%;
@@ -595,5 +612,4 @@ h2{
         font-size: 125%;
         text-align: center;
     }
-
 }

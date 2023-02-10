@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Log in</h2>
-
-    <div class="login-form-section">
+<div class="login-form-section">
+        <h2>Log in</h2>
         <!-- Form instruction -->
-        <p>New here? <a href="{{ url_for( 'register') }}">Register an account</a></p>
+        <p class="register-link">New here? <a href="{{ url_for( 'register') }}">Register an account</a></p>
         <form class="login-form" method="POST" action="{{ url_for( 'login') }}">
+
         <!-- Username -->
         <label for="username">Username</label><br>
-        <div class="register-form-inputs">
+        <div class="login-form-inputs">
             <input type="text" id="username" name="username"
             minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$"required><br>
         </div>
+
         <!-- Password -->
         <label for="password">Password</label><br>
         <div class="login-form-inputs">

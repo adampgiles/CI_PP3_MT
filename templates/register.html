@@ -1,24 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Register</h2>
+    <div class="user-form-section">
+        <h2>Register</h2>
 
-    <div class="register-form-section">
-        <form class="register-form" method="POST" action="{{ url_for( 'register') }}">
-            <!-- Form instruction -->
-            <p>Register below to share your Tales with other Mini Tales users.</p>
+        <p>Register below to share your Tales with other Mini Tales users.</p>
+
+        <!-- Form instruction -->
+        <form class="register-form" method="POST" action="{{ url_for( 'register') }}">       
             <!-- Username -->
             <label for="username">Username</label><br>
-            <div class="register-form-inputs">
+            <div class="user-form-inputs">
                 <input type="text" id="username" name="username"
                 minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$"required><br>
             </div>
+
             <!-- Password -->
             <label for="password">Password</label><br>
-            <div class="register-form-inputs">
+            <div class="user-form-inputs">
                 <input type="password" id="password" name="password"
                 minlength="6" maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$" required><br>
             </div>
-            <div class="register-form-submit">
+            <div class="user-form-submit">
                 <input type="submit" id="register-submit" name="register-submit" value="Create an Account" required><br>
             </div>
         </form>

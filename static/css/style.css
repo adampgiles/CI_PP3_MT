@@ -513,42 +513,42 @@ h2{
 
 
 /* Login Section*/
-.login-form-section{
+.user-form-section{
     display: flex;    
     flex-direction: column;
     align-items: center;    
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.login-form-section p{
+.user-form-section p{
     width: 80vw;
     margin: 30px;
     font-size: 125%;
     color: white;
     text-shadow: 0 -1px 2px black; 
 }
-.register-link a{
-    color: rgb(251, 204, 13);;
-}
-.login-form-inputs{
-    margin: 20px;
-    width: 60vw;
-}
-.login-form-inputs input{
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: white;
-    padding: 7.5px 15px 7.5px 15px;
-    width: 60vw;
-}
-.login-form-section label{
+.user-form-section label{
     width: 60vw;
     margin: 10px;
     font-size: 125%;
     color: white;
     text-shadow: 0 -1px 2px black;
 }
-.login-form-submit input{
+.register-link a{
+    color: rgb(251, 204, 13);;
+}
+.user-form-inputs{
+    margin: 20px;
+    width: 60vw;
+}
+.user-form-inputs input{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 60vw;
+}
+.user-form-submit input{
     color: black;
     font-size: large;
     font-weight: bold;
@@ -561,39 +561,50 @@ h2{
     box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
 }
 
-/* Register Section*/
+/* Login Section*/
 .register-form-section{
     display: flex;    
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .register-form-section p{
+    width: 80vw;
+    margin: 30px;
+    font-size: 125%;
+    color: white;
+    text-shadow: 0 -1px 2px black; 
+}
+.register-form-section label{
+    width: 60vw;
     margin: 10px;
+    font-size: 125%;
+    color: white;
+    text-shadow: 0 -1px 2px black;
 }
 .register-form-inputs{
-    margin: 5px;
+    margin: 20px;
+    width: 80vw;
 }
 .register-form-inputs input{
     border: 2px solid black;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: white;
     padding: 7.5px 15px 7.5px 15px;
-    width: 300px;
-}
-.register-form-section label{
-    color: black;
-    font-size: large;
-    font-weight: bold;
+    width: 80vw;
 }
 .register-form-submit input{
     color: black;
     font-size: large;
     font-weight: bold;
     border: 2px solid black;
-    border-radius: 50px;
-    background-color: white;
-    padding: 7.5px 15px 7.5px 15px;;
-    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 168, 55);
+    padding: 15px;
+    width: 80vw;
+    margin: 20px;
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
 }
 
 

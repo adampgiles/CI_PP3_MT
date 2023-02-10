@@ -276,14 +276,7 @@ h2{
 .tale-likes svg{
     margin-right: 5px;
 }
-.tale-content{
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: white;
-    padding: 7.5px 15px 7.5px 15px;
-    width: 300px;
-    height: 600px;
-}
+
 
 /* Full Tale Section*/
 .fulltale-section{
@@ -309,7 +302,7 @@ h2{
     border: 2px solid black; 
     border-radius: 5px;  
     background-color: rgb(255, 168, 55);
-    box-shadow: 0px 5px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
 }
 .fulltale-publish-date{
     float: right;
@@ -364,29 +357,36 @@ h2{
     display: flex;    
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .newtale-form-section p{
     margin: 10px;
+    font-size: 125%;
+    color: white;
+    text-shadow: 0 -1px 2px black; 
 }
 .newtale-form-inputs{
     margin: 5px;
 }
 .newtale-form-inputs input{
     border: 2px solid black;
-    border-radius: 50px;
-    background-color: white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 7.5px 15px 7.5px 15px;
-    width: 100%;
+    width: 80vw;    
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
 }
 .newtale-form-inputs select{
     border: 2px solid black;
-    border-radius: 50px;
-    background-color: white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 7.5px 15px 7.5px 15px;
-    width: 300px;
+    width: 80vw;    
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
 }
 .newtale-form-section label{
-    color: black;
+    color: white;
+    text-shadow: 0 -1px 2px black; 
     font-size: large;
     font-weight: bold;
 }
@@ -395,10 +395,30 @@ h2{
     font-size: large;
     font-weight: bold;
     border: 2px solid black;
-    border-radius: 50px;
-    background-color: white;
-    padding: 7.5px 15px 7.5px 15px;;
+    border-radius: 10px;
+    background-color: rgb(255, 168, 55);
+    padding: 7.5px 15px 7.5px 15px;
+    width: 80vw;
     margin: 10px;
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+}
+.tale-blurb{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 7.5px 15px 7.5px 15px;
+    width: 80vw;
+    height: 200px;    
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+}
+.tale-content{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 7.5px 15px 7.5px 15px;
+    width: 80vw;
+    height: 600px;
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
 }
 .newtale-link{
     display: flex;    
@@ -416,6 +436,90 @@ h2{
     border: 2px solid black; 
     border-radius: 5px;  
     background-color: lightcyan;
+}
+
+/* Edit Tale Section*/
+.edittale-form{
+    margin: 5px;
+}
+.edittale-form-section{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+}
+.edittale-form-section p{
+    font-weight: bold;
+    font-size: 100%;   
+    color: white;
+    text-shadow: 0 -1px 2px black; 
+    margin: 10px;
+}
+.edittale-form-inputs{
+    margin: 5px;
+}
+.edittale-form-inputs input{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.edittale-form-inputs select{
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;
+    width: 300px;
+}
+.edittale-form-section label{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+.edittale-form-submit input{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    padding: 7.5px 15px 7.5px 15px;;
+    margin: 10px;
+}
+
+/* Delete Tale Section*/
+.delete-section{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+}
+.delete-section h2{
+    margin: 10px;
+}
+.delete-section p{
+    margin: 20px;
+    font-size: 125%;
+}
+.delete-choices div{
+    font-size: large;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    margin: 10px;
+}
+.delete-choices a{
+    text-decoration: none;
+}
+.delete-cancel a{
+    color: blue;
+}
+.delete-confirm a{
+    color: red;
 }
 
 
@@ -489,92 +593,7 @@ h2{
     margin: 10px;
 }
 
-/* Edit Tale Section*/
-.edittale-form{
-    margin: 5px;
-}
-.edittale-form-section{
-    display: flex;    
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    margin: auto;
-}
-.edittale-form-section p{
-    font-weight: bold;
-    font-size: 100%;   
-    color: white;
-    text-shadow: 0 -1px 2px black; 
-    margin: 10px;
-}
-.edittale-form-inputs{
-    margin: 5px;
-}
-.edittale-form-inputs input{
-    border: 2px solid black;
-    border-radius: 50px;
-    background-color: white;
-    padding: 7.5px 15px 7.5px 15px;
-    width: 300px;
-}
-.edittale-form-inputs select{
-    border: 2px solid black;
-    border-radius: 50px;
-    background-color: white;
-    padding: 7.5px 15px 7.5px 15px;
-    width: 300px;
-}
-.edittale-form-section label{
-    color: black;
-    font-size: large;
-    font-weight: bold;
-}
-.edittale-form-submit input{
-    color: black;
-    font-size: large;
-    font-weight: bold;
-    border: 2px solid black;
-    border-radius: 50px;
-    background-color: white;
-    padding: 7.5px 15px 7.5px 15px;;
-    margin: 10px;
-}
 
-
-
-
-/* Delete Tale Section*/
-.delete-section{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 300px;
-}
-.delete-section h2{
-    margin: 10px;
-}
-.delete-section p{
-    margin: 20px;
-    font-size: 125%;
-}
-.delete-choices div{
-    font-size: large;
-    font-weight: bold;
-    padding: 5px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: white;
-    margin: 10px;
-}
-.delete-choices a{
-    text-decoration: none;
-}
-.delete-cancel a{
-    color: blue;
-}
-.delete-confirm a{
-    color: red;
-}
 
 /* Footer*/
 footer{

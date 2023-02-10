@@ -1,59 +1,59 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="search-filter-block">
-        <h2>Explore Tales</h2>
-        <form class="search-form" method="POST" action="{{ url_for( 'get_tales') }}">
-            <div class="search-bar">  
-                <label for="search-input">Search:</label>
-                <input type="text" id="search-input" name="search-input" value="{{ session['search'] }}" minlength="0" maxlength="30">   
-            </div>   
-        </form>        
 
-        {% if session["search"] != "" %}
-        <form class="clear-form" method="POST" action="{{ url_for( 'clear_search') }}">
-            <div class="search-clear-submit">
-                <button type="submit" name="search-clear-submit" value="Clear Search">Clear Search</button>
+<div class="search-filter-block">
+    <h2>Explore Tales</h2>
+    <form class="search-form" method="POST" action="{{ url_for( 'get_tales') }}">
+        <div class="search-bar">  
+            <label for="search-input">Search:</label>
+            <input type="text" id="search-input" name="search-input" value="{{ session['search'] }}" minlength="0" maxlength="30">   
+        </div>   
+    </form>        
+
+    {% if session["search"] != "" %}
+    <form class="clear-form" method="POST" action="{{ url_for( 'clear_search') }}">
+        <div class="search-clear-submit">
+            <button type="submit" name="search-clear-submit" value="Clear Search">Clear Search</button>
+        </div>
+    </form>
+    {% endif %}
+</div>
+
+
+<div class="tale-list-section">    
+    {% for tale in tales %}
+    <div class="tale-block">
+
+        <div class="tale-block-top">
+            <div class="tale-title-publish">
+                <div class="tale-title"><a href="{{ url_for( 'tale', _id=tale._id ) }}">{{tale.tale_title}}</a></div>
+                <div class="tale-publish-date">Published: {{tale.tale_publish_date}}</div>
             </div>
-        </form>
-        {% endif %}
-    </div>
+            <div class="tale-topic">{{tale.tale_topic}}</div>
+        </div>
 
+        <div class="tale-block-middle">{{tale.tale_blurb}}</div>
 
-    <div class="tale-list-section">    
-        {% for tale in tales %}
-        <div class="tale-block">
-
-            <div class="tale-block-top">
-                <div class="tale-title-publish">
-                    <div class="tale-title"><a href="{{ url_for( 'tale', _id=tale._id ) }}">{{tale.tale_title}}</a></div>
-                    <div class="tale-publish-date">Published: {{tale.tale_publish_date}}</div>
-                </div>
-                <div class="tale-topic">{{tale.tale_topic}}</div>
-            </div>
-
-            <div class="tale-block-middle">{{tale.tale_blurb}}</div>
-
-            <div class="tale-block-bottom">
-                <div class="tale-author">{{tale.tale_author}}</div>
-                <div class="tale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
-                <div class="tale-likes"> 
-                    {% if (session["logged_in"]) and (tale.tale_author != session["user"]) %}
-                        {% if tale._id|string in session["liked"] %}
-                        <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
-                            <i class="fa-solid fa-heart liked"></i>{{tale.tale_likes}}
-                        </a>
-                        {% else %}
-                        <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
-                            <i class="fa-solid fa-heart"></i>{{tale.tale_likes}}
-                        </a>
-                        {% endif %}
+        <div class="tale-block-bottom">
+            <div class="tale-author">{{tale.tale_author}}</div>
+            <div class="tale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
+            <div class="tale-likes"> 
+                {% if (session["logged_in"]) and (tale.tale_author != session["user"]) %}
+                    {% if tale._id|string in session["liked"] %}
+                    <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
+                        <i class="fa-solid fa-heart liked"></i>{{tale.tale_likes}}
+                    </a>
                     {% else %}
+                    <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
                         <i class="fa-solid fa-heart"></i>{{tale.tale_likes}}
+                    </a>
                     {% endif %}
-                </div>
+                {% else %}
+                    <i class="fa-solid fa-heart"></i>{{tale.tale_likes}}
+                {% endif %}
             </div>
         </div>
-        {% endfor %}
     </div>
-
+    {% endfor %}
+</div>
 {% endblock %}

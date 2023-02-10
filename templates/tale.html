@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="fulltale-section"> 
-    <div class="fulltale-block">
+
+<h2>{{tale.tale_title}}</h2>
+
+<div class="fulltale-section">
+    <div class="fulltale-block">    
+
+        <div class="fulltale-author">By {{tale.tale_author}}</div>
+        
         {% if session["logged_in"] %}
             {% if tale.tale_author == session["user"] %}
-            <a class="edit-delete" href="{{ url_for( 'edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
+                <a class="edit-delete" href="{{ url_for( 'edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
             {% endif %}
-        {% endif %}    
-        <div class="fulltale-publish-date">Published: {{tale.tale_publish_date}}</div>
-        <div class="fulltale-title">
-            <h3>{{tale.tale_title}}</h3>
-            <div class="fulltale-author">By {{tale.tale_author}}</div>
-        </div>       
+        {% endif %}  
 
         <div class="fulltale-views-likes">
             <div class="fulltale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
@@ -32,8 +33,11 @@
             </div>
         </div>
 
-        <div class="fulltale-content">{{tale.tale_content}}</div>
-
+        <div class="fulltale-content">
+            <div class="fulltale-publish-date">Published: {{tale.tale_publish_date}}</div><br>
+            {{tale.tale_content}}
+        </div>
     </div> 
-</div>   
+
+</div>
 {% endblock %}

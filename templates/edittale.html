@@ -1,29 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Edit Your Tale</h2>
-
     <div class="edittale-form-section">
+
+        <h2>Edit Your Tale</h2>
+
         <!-- Form instruction -->
-        <p>Complete the form below to<br>edit Your Tale.</p>
-        <a class="edit-delete" href="{{ url_for( 'deletetale', _id=tale._id ) }}">Delete this Tale</a>
-        <form class="edittale-form" method="POST" action="{{ url_for( 'edittale', _id=tale._id ) }}">            
+        <p>Complete the form below to edit Your Tale.</p>
+
+        <a class="delete" href="{{ url_for( 'deletetale', _id=tale._id ) }}">Delete this Tale</a>
+
+        <form class="edittale-form" method="POST" action="{{ url_for( 'edittale', _id=tale._id ) }}">
+
         <!-- Title -->
         <label for="title">Tale Title</label><br>
-        <div class="edittale-form-inputs">
+        <div class="tale-form-inputs">
             <input type="text" id="title" name="title"
             minlength="3" maxlength="30" value="{{ tale.tale_title }}" required><br>
         </div>
 
-        <!-- Blurb -->
-        <label for="blurb">Tale Blurb</label><br>
-        <div class="edittale-form-inputs">
-            <input type="text" id="blurb" name="blurb"
-            minlength="3" maxlength="60" value="{{ tale.tale_blurb }}" required><br>
-        </div>
-
         <!-- Topic -->
         <label for="topic">Tale Topic</label><br>
-        <div class="edittale-form-inputs">
+        <div class="tale-form-inputs">
             <select name="topic" id="topic" value="{{ tale.tale_topic }}">
                 <option value="Adventure">Adventure</option>
                 <option value="Fantasy">Fantasy</option>
@@ -37,13 +34,19 @@
               </select>
         </div>
 
+        <!-- Blurb -->
+        <label for="blurb">Tale Blurb</label><br>
+        <div class="tale-form-inputs">
+            <textarea id="tale-blurb"  class="tale-blurb" name="tale-blurb" cols="30" rows="10" required></textarea>
+        </div>
+
         <!-- Tale Content -->
         <label for="tale-content">Your Tale</label><br>
         <div class="edittale-form-inputs">
             <textarea id="tale-content"  class="tale-content" name="tale-content" cols="30" rows="10">{{ tale.tale_content }}</textarea>
         </div>    
 
-        <div class="edittale-form-submit">
+        <div class="tale-form-submit">
             <input type="submit" id="edittale-submit" name="edittale-submit" value="Re-Share Your Tale" required><br>
         </div>
         </form>

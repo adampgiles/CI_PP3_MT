@@ -128,16 +128,20 @@ h2{
     border: 2px solid black;
     border-radius: 10px;
     background-color: white;
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
     padding: 7.5px 15px 7.5px 15px;
     width: 75%;
 }
-.search-form-submit input{
-    display: none;
+.search-clear-submit button{
+    color: black;
+    font-size: large;
+    font-weight: bold;
     border: 2px solid black;
-    border-radius: 50px;
-    background-color: lightcyan;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
     padding: 7.5px 15px 7.5px 15px;
-    width: 300px;
+    margin: 10px;
 }
 
 /* Explore Tales - Tale Section*/

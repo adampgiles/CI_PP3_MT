@@ -5,14 +5,19 @@
         <form class="search-form" method="POST" action="{{ url_for( 'get_tales') }}">
             <div class="search-bar">  
                 <label for="search-input">Search:</label>
-                <input type="text" id="search-input" name="search-input" minlength="3" maxlength="30" required>
-            </div>       
-            
-            <div class="search-form-submit">
-                <input type="submit" id="search-submit" name="search-submit" value="Search / Filter">
+                <input type="text" id="search-input" name="search-input" value="{{ session['search'] }}" minlength="0" maxlength="30">   
+            </div>   
+        </form>        
+
+        {% if session["search"] != "" %}
+        <form class="clear-form" method="POST" action="{{ url_for( 'clear_search') }}">
+            <div class="search-clear-submit">
+                <button type="submit" name="search-clear-submit" value="Clear Search">Clear Search</button>
             </div>
         </form>
+        {% endif %}
     </div>
+
 
     <div class="tale-list-section">    
         {% for tale in tales %}

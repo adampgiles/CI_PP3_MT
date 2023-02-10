@@ -18,20 +18,44 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-
 @app.route("/get_tales", methods=["GET","POST"])
 def get_tales():    
     """
     This function displays all tales in the tales collection on the base template.
-    """
-    tales = mongo.db.tales.find()
+    """  
+    if session.get("search") != None:
+        search = session.get("search")         
+        if search == "":
+            session["search"] = search
+            tales = mongo.db.tales.find()
+        else:            
+            session["search"] = search
+            tales = mongo.db.tales.find({"$text": { "$search": search }})
+    else:
+        session["search"] = ""
+        tales = mongo.db.tales.find()
+        
+    if request.method == "POST":         
+        search = request.form.get("search-input") 
+        print(search) 
+        if search == "":
+            session["search"] = search
+            tales = mongo.db.tales.find()
+        else:            
+            tales = mongo.db.tales.find({"$text": { "$search": str(search) }})
+            session["search"] = search
+        return render_template("tales.html", tales=tales) 
+        
     if session.get("logged_in") == True:
         liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
-        session["liked"] = liked
-    if request.method == "POST":
-        search = request.form.get("search-input")
-        tales = mongo.db.tales.find({"$text": { "$search": search }})
-        return render_template("tales.html", tales=tales)
+        session["liked"] = liked       
+
+    return render_template("tales.html", tales=tales)
+
+@app.route("/clear_search", methods=["POST"])
+def clear_search():
+    session["search"] = ""
+    tales = mongo.db.tales.find()
     return render_template("tales.html", tales=tales)
 
 @app.route("/register", methods=["GET", "POST"])

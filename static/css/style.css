@@ -102,7 +102,7 @@ h1 a:hover {
 /* Page Titles */
 h2{
     width: 100%;
-    padding: 10px 0px 10px 20px;
+    padding: 10px 0 10px 0;
     font-size: 160%;
     font-weight: bold;
     text-align: center;
@@ -474,17 +474,18 @@ h2{
 
 /* Delete Tale Section*/
 .delete-section{
-    display: flex;
+    display: flex;    
     flex-direction: column;
-    margin: auto;
-    width: 300px;
-}
-.delete-section h2{
-    margin: 10px;
+    align-items: center;    
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .delete-section p{
-    margin: 20px;
+    width: 80vw;
+    margin: 10px;
     font-size: 125%;
+    color: white;
+    text-shadow: 0 -1px 2px black; 
 }
 .delete-choices div{
     font-size: large;
@@ -492,17 +493,23 @@ h2{
     padding: 5px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: white;
     margin: 10px;
+    width: 60vw;
 }
 .delete-choices a{
     text-decoration: none;
 }
+.delete-cancel{
+    background-color: rgb(251, 204, 13);    
+}
 .delete-cancel a{
-    color: blue;
+    color: black;    
+}
+.delete-confirm{
+    background-color: rgba(255, 55, 55);
 }
 .delete-confirm a{
-    color: red;
+    color: white;    
 }
 
 

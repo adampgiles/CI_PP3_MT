@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Explore Tales</h2>
-
     <div class="search-filter-block">
+        <h2>Explore Tales</h2>
         <form class="search-form" method="POST" action="{{ url_for( 'get_tales') }}">
             <div class="search-bar">  
                 <label for="search-input">Search:</label>

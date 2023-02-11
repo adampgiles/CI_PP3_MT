@@ -7,9 +7,9 @@
         <!-- Form instruction -->
         <p>Complete the form below to edit Your Tale.</p>
 
-        <a class="delete" href="{{ url_for( 'deletetale', _id=tale._id ) }}">Delete this Tale</a>
+        <a class="delete" href="{{ url_for( 'tales.deletetale', _id=tale._id ) }}">Delete this Tale</a>
 
-        <form class="edittale-form" method="POST" action="{{ url_for( 'edittale', _id=tale._id ) }}">
+        <form class="edittale-form" method="POST" action="{{ url_for( 'tales.edittale', _id=tale._id ) }}">
 
         <!-- Title -->
         <label for="title">Tale Title</label><br>

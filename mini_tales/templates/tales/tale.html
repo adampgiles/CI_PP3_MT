@@ -10,7 +10,7 @@
         
         {% if session["logged_in"] %}
             {% if tale.tale_author == session["user"] %}
-                <a class="edit-delete" href="{{ url_for( 'edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
+                <a class="edit-delete" href="{{ url_for( 'tales.edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
             {% endif %}
         {% endif %}  
 
@@ -19,11 +19,11 @@
             <div class="fulltale-likes">
                 {% if (session["logged_in"]) and (tale.tale_author != session["user"]) %}
                     {% if _id in session["liked"] %}
-                    <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
+                    <a href="{{ url_for( 'tales.like_tale', _id=tale._id ) }}">
                         <i class="fa-solid fa-heart liked"></i>{{tale.tale_likes}}
                     </a>
                     {% else %}
-                    <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
+                    <a href="{{ url_for( 'tales.like_tale', _id=tale._id ) }}">
                         <i class="fa-solid fa-heart"></i>{{tale.tale_likes}}
                     </a>
                     {% endif %}

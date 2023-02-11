@@ -3,7 +3,7 @@
 
 <div class="search-filter-block">
     <h2>Explore Tales</h2>
-    <form class="search-form" method="POST" action="{{ url_for( 'get_tales') }}">
+    <form class="search-form" method="POST" action="{{ url_for( 'tales.get_tales') }}">
         <div class="search-bar">  
             <label for="search-input">Search:</label>
             <input type="text" id="search-input" name="search-input" value="{{ session['search'] }}" minlength="0" maxlength="30">   
@@ -11,7 +11,7 @@
     </form>        
 
     {% if session["search"] != "" %}
-    <form class="clear-form" method="POST" action="{{ url_for( 'clear_search') }}">
+    <form class="clear-form" method="POST" action="{{ url_for( 'tales.clear_search') }}">
         <div class="search-clear-submit">
             <button type="submit" name="search-clear-submit" value="Clear Search">Clear Search</button>
         </div>
@@ -26,7 +26,7 @@
 
         <div class="tale-block-top">
             <div class="tale-title-publish">
-                <div class="tale-title"><a href="{{ url_for( 'tale', _id=tale._id ) }}">{{tale.tale_title}}</a></div>
+                <div class="tale-title"><a href="{{ url_for( 'tales.tale', _id=tale._id ) }}">{{tale.tale_title}}</a></div>
                 <div class="tale-publish-date">Published: {{tale.tale_publish_date}}</div>
             </div>
             <div class="tale-topic">{{tale.tale_topic}}</div>
@@ -40,11 +40,11 @@
             <div class="tale-likes"> 
                 {% if (session["logged_in"]) and (tale.tale_author != session["user"]) %}
                     {% if tale._id|string in session["liked"] %}
-                    <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
+                    <a href="{{ url_for( 'tales.like_tale', _id=tale._id ) }}">
                         <i class="fa-solid fa-heart liked"></i>{{tale.tale_likes}}
                     </a>
                     {% else %}
-                    <a href="{{ url_for( 'like_tale', _id=tale._id ) }}">
+                    <a href="{{ url_for( 'tales.like_tale', _id=tale._id ) }}">
                         <i class="fa-solid fa-heart"></i>{{tale.tale_likes}}
                     </a>
                     {% endif %}

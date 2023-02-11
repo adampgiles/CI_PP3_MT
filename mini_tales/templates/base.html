@@ -13,16 +13,16 @@
     <div class="page-container">        
         <header>
             <div class="site-logo">
-                <h1><a href="{{ url_for( 'get_tales') }}"><i class="fa-solid fa-book"></i>Mini Tales</a></h1> 
+                <h1><a href="{{ url_for( 'tales.get_tales') }}"><i class="fa-solid fa-book"></i>Mini Tales</a></h1> 
             </div>
             <div class="navigation-bar">
                 <ul>
-                    <li><a href="{{ url_for('get_tales') }}">Explore Tales</a></li>
+                    <li><a href="{{ url_for('tales.get_tales') }}">Explore Tales</a></li>
                     <!-- {% if session["logged_in"] %} -->
-                    <li><a href="{{ url_for('mytales', username=session['user']) }}">My Tales</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                    <li><a href="{{ url_for('tales.mytales', username=session['user']) }}">My Tales</a></li>
+                    <li><a href="{{ url_for('authentication.logout') }}">Log out</a></li>
                     <!-- {% else %} -->
-                    <li><a href="{{ url_for('login') }}">Log in</a></li>
+                    <li><a href="{{ url_for('authentication.login') }}">Log in</a></li>
                     <!-- {% endif %} -->
                 </ul> 
             </div>

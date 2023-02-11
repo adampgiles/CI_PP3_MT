@@ -293,12 +293,14 @@ h2{
 }
 .edit-delete{
     color: black;
-    width: 100%;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
     text-decoration: none;
     padding: 5px;
     border: 2px solid black; 
     border-radius: 5px;  
-    background-color: rgb(255, 168, 55);
+    background-color: rgb(251, 204, 13);
     box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
 }
 .fulltale-publish-date{

@@ -156,10 +156,12 @@ def like_tale(_id):
     liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
     if _id in liked:
         mongo.db.users.update_one({"username": session["user"]},{ "$pull": {"liked_tales": _id}})
-        mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_likes": -1}})        
+        mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_likes": -1}})  
+        mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_views": -1}})      
     else:
         mongo.db.users.update_one({"username": session["user"]},{ "$push": {"liked_tales": _id}})
         mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_likes": 1}})
+        mongo.db.tales.update_one({"_id": ObjectId(_id)},{ "$inc": {"tale_views": -1}})
     liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
     session["liked"] = liked
     return redirect(request.referrer)

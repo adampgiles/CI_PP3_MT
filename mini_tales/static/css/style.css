@@ -1,9 +1,21 @@
+/* Global variables for site colours */
 :root {
+    --site-logo: rgb(10, 10, 10);
     --text-hover: rgba(255, 193, 59);
+    --off-white-text: rgba(240, 240, 240);
     --base-text: rgb(10, 10, 10);
-  }
-  
+    --base-border: rgb(10, 10, 10);
+    --off-white: rgba(255, 255, 255, 0.95);
+    --flashes: rgb(244, 68, 68);
+    --tale-block-bg: linear-gradient(0deg, rgb(251, 204, 13, 0.6) 50%, rgb(244, 68, 68, 0.75) 100%);
+    --tale-block-border: rgba(255, 255, 255, 0.25);
+    --bg-overlay: rgba(0, 0, 0, 0.65);
+    --button-bg: rgb(251, 204, 13);
+    --box-shadows: rgba(0, 0, 0, 0.5);
+    --text-shadows: rgb(10, 10, 10)
+  }  
 
+/* Default Site layout */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -11,11 +23,13 @@
     font-size: 100%;
 }
 
+/* Body */
 body{        
-    background-color: white;
+    background-color: var(--off-white);
     text-align: center;
 }
 
+/* Main Site/Page container with background overlay */
 .page-container{
     max-width: 1920px;
     background: url("/static/images/books_background.jpg") no-repeat center;
@@ -23,8 +37,12 @@ body{
     background-repeat: repeat;    
     min-height: 100vh;
     margin: auto;
-    border: solid black;
-    border-width: 0px 2px 0px 2px;
+    border: solid var(--base-border);
+    border-width: 0 2px 0 2px;    
+}
+.background-overlay{
+    background: var(--bg-overlay);
+    min-height: 100vh;
 }
 
 /* Header - Includes Site Logo and Navigation Bar */
@@ -32,9 +50,9 @@ header{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;    
-    background-color: white;
-    border: solid black;
-    border-width: 0px 0px 2px 0px;
+    background-color: var(--off-white);
+    border: solid var(--base-border);
+    border-width: 0 0 2px 0;
     padding: 5px;
 }
 .site-logo{
@@ -42,14 +60,14 @@ header{
     flex-basis: 50%;
 }
 h1{
-    margin: 0;    
+    margin: 0 0 10px 0;    
     padding: 5px;
     float: left;
     font-weight: bold;
     font-size: 200%;
 }
 h1 a{
-    color: black;
+    color: var(--site-logo);
     text-decoration: none;
 }
 h1 a:hover {
@@ -74,7 +92,7 @@ h1 a:hover {
 .navigation-bar ul li{   
     display: inline-block;    
     padding: 0 5px 5px 5px;
-    margin: 0px 15px 0px 15px;
+    margin: 0 15px 0 15px;
     border-bottom: 3px solid transparent;  
 }
 .navigation-bar ul li:hover {
@@ -82,17 +100,17 @@ h1 a:hover {
 }
 .navigation-bar ul li a{
     margin: auto;
-    color: black;
+    color: var(--base-text);
     font-weight: bold;
     text-decoration: none;
 }
 
 /* Flash messages */
 .flashes{
-    background-color: rgb(251, 204, 13);
+    background-color: var(--flashes);
 }
 .flashes h4{
-    color: black;
+    color: var(--off-white-text);
     padding: 5px;
 }
 
@@ -103,30 +121,27 @@ h2{
     font-size: 160%;
     font-weight: bold;
     text-align: center;
-    color: white;
-    text-shadow: 0 2px 5px black;   
-    background: linear-gradient(0deg, hwb(0 0% 100% / 0) 10%, hsla(0, 0%, 0%, 0.80) 30%); 
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 
 /* Explore Tales Search Bar */
 .search-filter-block{
     width: 100%;
-    padding: 0px 0px 20px 0px;
-    margin: 0px 0px 10px 0px;
-    text-shadow: 0 2px 5px black;
-    background: linear-gradient(0deg, hwb(0 0% 100% / 0) 10%, hsla(0, 0%, 0%, 0.76) 50%); 
+    padding: 0 0 20px 0;
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .search-bar label{
     font-weight: bold;
     font-size: 110%;   
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .search-bar input{
-    border: 2px solid black;
+    border: 2px solid var(--base-border);
     border-radius: 10px;
-    background-color: white;
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    background-color: var(--off-white);
+    box-shadow: 0 2px var(--box-shadows);
     padding: 7.5px 15px 7.5px 15px;
     width: 75%;
 }
@@ -134,10 +149,10 @@ h2{
     color: black;
     font-size: large;
     font-weight: bold;
-    border: 2px solid black;
+    border: 2px solid var(--off-white);
     border-radius: 10px;
-    background-color: white;
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    background-color: var(--button-bg);
+    box-shadow: 0 2px var(--box-shadows);
     padding: 7.5px 15px 7.5px 15px;
     margin: 10px;
 }
@@ -148,20 +163,20 @@ h2{
     flex-wrap: wrap;
     justify-content: space-around;
     flex-basis: 33.333333%;
-    padding: 10px;
+    padding: 10px;    
 }
 .tale-block{
     display: flex;    
     flex-direction: column;
     justify-content: center;
-    border: 2px solid black;
+    border: 2px solid var(--tale-block-border); 
     border-radius: 5px;
     margin-bottom: 10px;
     height: 325px;
     width: 475px;
     padding: 4px;
-    background: linear-gradient(0deg, hwb(41 23% 0% / 0.801) 50%, hsla(34, 100%, 51%, 0.949) 100%); 
-    box-shadow: 0px 5px hsla(0, 0%, 0%, 0.5);
+    background: var(--tale-block-bg); 
+    box-shadow: 0 2px var(--box-shadows);
 }
 .tale-block-top{
     display: flex;   
@@ -179,8 +194,8 @@ h2{
     display: flex;    
     flex-direction: column;
     width: 70%;
-    background-color: white; 
-    border: 2px solid black; 
+    background-color: var(--off-white); 
+    border: 2px solid var(--base-border); 
     border-radius: 2px;
     height: 100%;
     margin: 1px;
@@ -191,7 +206,7 @@ h2{
 }
 .tale-title a{
     text-decoration: underline;
-    color: black;
+    color: var(--base-text);
 }
 .tale-publish-date{
     font-style: italic;
@@ -204,8 +219,8 @@ h2{
     font-weight: bold;
     width: 30%;
     height: 100%;
-    background-color: white; 
-    border: 2px solid black;  
+    background-color: var(--off-white); 
+    border: 2px solid var(--base-border);  
     border-radius: 2px;
     margin: 1px;
 }
@@ -216,8 +231,8 @@ h2{
     align-items: center; 
     text-align: justify;
     height: 65%;
-    background-color: white;
-    border: 2px solid black;   
+    background-color: var(--off-white);
+    border: 2px solid var(--base-border);   
     border-radius: 2px;
     padding: 10px;
     margin: 2px;
@@ -240,16 +255,16 @@ h2{
     font-weight: bold;
     width: 50%; 
     height: 100%;
-    background-color: white;  
-    border: 2px solid black; 
+    background-color: var(--off-white);  
+    border: 2px solid var(--base-border); 
     border-radius: 2px;
     margin: 1px;
 }
 .tale-views{
     width: 25%;
     height: 100%; 
-    background-color: white;
-    border: 2px solid black;   
+    background-color: var(--off-white);
+    border: 2px solid var(--base-border);   
     border-radius: 2px; 
     margin: 1px;
 }
@@ -260,20 +275,19 @@ h2{
 .tale-likes{
     width: 25%;
     height: 100%; 
-    background-color: white;
-    border: 2px solid black;   
+    background-color: var(--off-white);
+    border: 2px solid var(--base-border);   
     border-radius: 2px; 
     margin-left: 1px;
     margin-right: 3px;
 }
 .tale-likes a{
     text-decoration: none;
-    color: black;
+    color: var(--base-text);
 }
 .tale-likes svg{
     margin-right: 5px;
 }
-
 
 /* Full Tale Section*/
 .fulltale-section{
@@ -282,26 +296,26 @@ h2{
     justify-content: flex-start;
 }
 .fulltale-block{
-    padding: 0px 10vw 0px 10vw;
+    padding: 0 10vw 0 10vw;
 }
 .fulltale-author{
     font-weight: bold;
     font-size: 125%;   
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    color: var(--off-white);
+    text-shadow: 0 2px 5px var(--text-shadows);    
     margin: 0 0 20px 0;
 }
 .edit-delete{
-    color: black;
+    color: var(--base-text);
     font-weight: bold;
     width: 80%;
     margin: auto;
     text-decoration: none;
     padding: 5px;
-    border: 2px solid black; 
+    border: 2px solid var(--off-white); 
     border-radius: 5px;  
-    background-color: rgb(251, 204, 13);
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    background-color: var(--button-bg);
+    box-shadow: 0 2px var(--box-shadows);
 }
 .fulltale-publish-date{
     float: right;
@@ -310,8 +324,8 @@ h2{
 .fulltale-views-likes{
     display: flex;    
     justify-content: space-around;
-    background-color: white;
-    border: 2px solid black;
+    background-color: var(--off-white);
+    border: 2px solid var(--base-border);
     border-radius: 5px;
     width: 100%;
     padding: 5px;
@@ -334,17 +348,17 @@ h2{
 }
 .fulltale-likes a{
     text-decoration: none;
-    color: black;
+    color: var(--base-text);
 }
 .fulltale-likes svg{
     margin-right: 5px;
 }
 .liked{
-    color: red;
+    color: var(--flashes);
 }
 .fulltale-content{
-    background-color: white;
-    border: 2px solid black;
+    background-color: var(--off-white);
+    border: 2px solid var(--base-border);
     border-radius: 5px;
     padding: 5px;
     width: 100%;
@@ -359,83 +373,83 @@ h2{
     margin: auto;
 }
 .newtale-link a{    
-    color: black;
+    color: var(--base-text);
     font-weight: bold;
     text-decoration: none;
     width: 50vw;
     padding: 2px;
     margin: 5px;
-    border: 2px solid black; 
+    border: 2px solid var(--off-white); 
     border-radius: 5px;  
-    background-color: rgb(251, 204, 13);
+    background-color: var(--button-bg);
 }
 .newtale-form-section{
     display: flex;    
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 .newtale-form-section p{
     margin: 10px;
     font-size: 125%;
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .newtale-form-section label{
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);    
     font-size: large;
     font-weight: bold;
+    margin: 20px;
 }
 
 .tale-form-inputs{
     margin: 5px;
 }
 .tale-form-inputs input{
-    border: 2px solid black;
+    border: 2px solid var(--base-border);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
     width: 80vw;    
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 2px var(--box-shadows);
 }
 .tale-form-inputs select{
-    border: 2px solid black;
+    border: 2px solid var(--base-border);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
     width: 80vw;    
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 2px var(--box-shadows);
 }
 .tale-form-submit input{
-    color: black;
+    color: var(--base-text);
     font-size: large;
     font-weight: bold;
-    border: 2px solid black;
+    border: 2px solid var(--off-white);
     border-radius: 10px;
-    background-color: rgb(255, 168, 55);
+    background-color: var(--button-bg);
     padding: 7.5px 15px 7.5px 15px;
     width: 80vw;
     margin: 10px;
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 2px var(--box-shadows);
 }
 .tale-blurb{
-    border: 2px solid black;
+    border: 2px solid var(--base-border);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
     width: 80vw;
     height: 200px;    
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 2px var(--box-shadows);
 }
 .tale-content{
-    border: 2px solid black;
+    border: 2px solid var(--base-border);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
     width: 80vw;
     height: 600px;
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 2px var(--box-shadows);
 }
 
 /* Edit Tale Section*/
@@ -443,31 +457,31 @@ h2{
     display: flex;    
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 .edittale-form-section p{
     width: 80vw;
     margin: 10px;
     font-size: 125%;
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);    
 }
 .edittale-form-section label{
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);    
     font-size: large;
     font-weight: bold;
 }
 .delete{
-    color: white;
+    color: var(--off-white);
+    font-weight: bold;
     width: 50vw;
     text-decoration: none;
     padding: 5px;
-    margin: 5px 0px 10px 0px;
-    border: 2px solid black; 
+    margin: 5px 0 10px 0;
+    border: 2px solid var(--off-white); 
     border-radius: 5px;  
-    background-color: rgba(255, 55, 55);
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    background-color: var(--flashes);
+    box-shadow: 0 2px var(--box-shadows);
 }
 
 /* Delete Tale Section*/
@@ -475,89 +489,85 @@ h2{
     display: flex;    
     flex-direction: column;
     align-items: center;    
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 .delete-section p{
     width: 80vw;
     margin: 10px;
     font-size: 125%;
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    font-weight: bold;
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .delete-choices div{
     font-size: large;
     font-weight: bold;
-    padding: 5px;
-    border: 2px solid black;
+    padding: 10px;
+    border: 2px solid var(--off-white);  
     border-radius: 5px;
-    margin: 10px;
+    margin: 20px;
     width: 60vw;
 }
 .delete-choices a{
-    text-decoration: none;
+    text-decoration: none;    
 }
 .delete-cancel{
-    background-color: rgb(251, 204, 13);    
+    background-color: var(--button-bg);      
 }
 .delete-cancel a{
-    color: black;    
+    color: var(--base-text);    
 }
 .delete-confirm{
-    background-color: rgba(255, 55, 55);
+    background-color: var(--flashes);
 }
 .delete-confirm a{
-    color: white;    
+    color: var(--off-white);    
 }
-
 
 /* Login Section*/
 .user-form-section{
     display: flex;    
     flex-direction: column;
-    align-items: center;    
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;   
 }
 .user-form-section p{
     width: 80vw;
     margin: 30px;
     font-size: 125%;
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .user-form-section label{
     width: 60vw;
     margin: 10px;
     font-size: 125%;
-    color: white;
-    text-shadow: 0 -1px 2px black;
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .register-link a{
-    color: rgb(251, 204, 13);;
+    color: var(--button-bg);
 }
 .user-form-inputs{
     margin: 20px;
     width: 60vw;
 }
 .user-form-inputs input{
-    border: 2px solid black;
+    border: 2px solid var(--base-border);
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
     width: 60vw;
 }
 .user-form-submit input{
-    color: black;
+    color: var(--base-text);
     font-size: large;
     font-weight: bold;
-    border: 2px solid black;
+    border: 2px solid var(--off-white);
     border-radius: 10px;
-    background-color: rgb(255, 168, 55);
+    background-color: var(--button-bg);
     padding: 15px;
     width: 60vw;
     margin: 20px;
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 2px var(--box-shadows);
 }
 
 /* Login Section*/
@@ -565,52 +575,49 @@ h2{
     display: flex;    
     flex-direction: column;
     align-items: center;    
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 .register-form-section p{
     width: 80vw;
     margin: 30px;
     font-size: 125%;
-    color: white;
-    text-shadow: 0 -1px 2px black; 
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .register-form-section label{
     width: 60vw;
     margin: 10px;
     font-size: 125%;
-    color: white;
-    text-shadow: 0 -1px 2px black;
+    color: var(--off-white-text);
+    text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .register-form-inputs{
     margin: 20px;
     width: 80vw;
 }
 .register-form-inputs input{
-    border: 2px solid black;
+    border: 2px solid var(--base-border);
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
     width: 80vw;
 }
 .register-form-submit input{
-    color: black;
+    color: var(--base-text);
     font-size: large;
     font-weight: bold;
-    border: 2px solid black;
+    border: 2px solid var(--off-white);
     border-radius: 10px;
-    background-color: rgb(255, 168, 55);
+    background-color: var(--button-bg);
     padding: 15px;
     width: 80vw;
     margin: 20px;
-    box-shadow: 0px 2px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 2px var(--box-shadows);
 }
 
 /* Footer*/
-footer{
+.footer-link{
     padding: 10px 0 10px 0;
-    border: solid rgba(0, 0, 0, 0.75);
-    border-width: 2px 0px 0px 0px;
+    background-color: var(--off-white);
 }
 
 /* Devices with width smaller than 600px*/

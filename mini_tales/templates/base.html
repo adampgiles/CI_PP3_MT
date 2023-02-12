@@ -10,48 +10,53 @@
     <title>Mini Tales</title>
 </head>
 <body>
-    <div class="page-container">        
-        <header>
-            <div class="site-logo">
-                <h1><a href="{{ url_for( 'tales.get_tales') }}"><i class="fa-solid fa-book"></i>Mini Tales</a></h1> 
-            </div>
-            <div class="navigation-bar">
-                <ul>
-                    <li><a href="{{ url_for('tales.get_tales') }}">Explore Tales</a></li>
-                    <!-- {% if session["logged_in"] %} -->
-                    <li><a href="{{ url_for('tales.mytales', username=session['user']) }}">My Tales</a></li>
-                    <li><a href="{{ url_for('authentication.logout') }}">Log out</a></li>
-                    <!-- {% else %} -->
-                    <li><a href="{{ url_for('authentication.login') }}">Log in</a></li>
-                    <!-- {% endif %} -->
-                </ul> 
-            </div>
-        </header>
-        
-        <section>
-            <!-- flash messages -->
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="flashes">
-                            <h4>{{ message }}</h4>
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
-        </section>
-        
-        <main>
-            {% block content %}
-            {% endblock %}  
-        </main>
-        
-        
-        {% block scripts %}
-        {% endblock %}
+    <div class="page-container">   
+        <div class="background-overlay">      
+            <header>
+                <div class="site-logo">
+                    <h1><a href="{{ url_for( 'tales.get_tales') }}"><i class="fa-solid fa-book"></i>Mini Tales</a></h1> 
+                </div>
+                <div class="navigation-bar">
+                    <ul>
+                        <li><a href="{{ url_for('tales.get_tales') }}">Explore Tales</a></li>
+                        <!-- {% if session["logged_in"] %} -->
+                        <li><a href="{{ url_for('tales.mytales', username=session['user']) }}">My Tales</a></li>
+                        <li><a href="{{ url_for('authentication.logout') }}">Log out</a></li>
+                        <!-- {% else %} -->
+                        <li><a href="{{ url_for('authentication.login') }}">Log in</a></li>
+                        <!-- {% endif %} -->
+                    </ul> 
+                </div>
+            </header>
+            
+            <section>
+                <!-- flash messages -->
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="flashes">
+                                <h4>{{ message }}</h4>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </section>
+            
+            <main>
+                {% block content %}
+                {% endblock %}  
+            </main>
+            
+            
+            {% block scripts %}
+            {% endblock %}
+        </div>
     </div>
+
     <footer>
-        <a href="https://www.freepik.com/free-vector/book-shelves-dtcorative-colorful-icon-poster_2871137.htm#query=books&position=7&from_view=search&track=sph">Background Image by macrovector</a> on Freepik
+        <div class="footer-link">
+            <a href="https://www.freepik.com/free-vector/book-shelves-dtcorative-colorful-icon-poster_2871137.htm#query=books&position=7&from_view=search&track=sph">Background Image by macrovector</a> on Freepik
+        </div>
     </footer>
 </body>
 </html>

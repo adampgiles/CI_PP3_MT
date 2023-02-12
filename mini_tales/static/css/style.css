@@ -32,7 +32,7 @@ body{
 /* Main Site/Page container with background overlay */
 .page-container{
     max-width: 1920px;
-    background: url("/static/images/books_background.jpg") no-repeat center;
+    background: url("/static/images/books_background.webp") no-repeat center;
     background-size: 25%;
     background-repeat: repeat;    
     min-height: 100vh;

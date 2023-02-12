@@ -114,6 +114,16 @@ h1 a:hover {
     padding: 5px;
 }
 
+/* Validation Alerts */
+.validation-alert-container{
+    display: none;
+    background-color: var(--flashes);
+}
+.validation-alert-container h4{
+    color: var(--off-white-text);
+    padding: 5px;
+}
+
 /* Page Titles */
 h2{
     width: 100%;

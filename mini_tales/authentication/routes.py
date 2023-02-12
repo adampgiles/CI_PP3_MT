@@ -12,7 +12,8 @@ def register():
     """
     This function registers an account for a user in the users database collection. 
     Once registered the user is taken to their My Tales page and a login session is created.
-    The user is redirected back to the register page, if the username already exists.
+    The user is redirected back to the register page, if the username already exists or both
+    password input fields do not match.
     The user's password is encrypted before storing in the users collection.
     """
     if request.method == "POST":
@@ -31,9 +32,9 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Account Successfully Created!")
         session["logged_in"] = True
-        return redirect(url_for("tales.mytales", username=session["user"]))
+        return redirect(url_for("tales.mytales", username=session["user"])) 
     return render_template("authentication/register.html")
 
 @authentication.route("/login", methods=["GET", "POST"])

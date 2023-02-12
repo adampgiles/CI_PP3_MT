@@ -302,9 +302,9 @@ h2{
 
 /* Full Tale Section*/
 .fulltale-section{
-    display: flex;
+    display: flex;    
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
 }
 .fulltale-block{
     padding: 0 10vw 0 10vw;
@@ -319,7 +319,7 @@ h2{
 .edit-delete{
     color: var(--base-text);
     font-weight: bold;
-    width: 80%;
+    width: 80vw;
     margin: auto;
     text-decoration: none;
     padding: 5px;
@@ -413,7 +413,6 @@ h2{
     font-weight: bold;
     margin: 20px;
 }
-
 .tale-form-inputs{
     margin: 5px;
 }
@@ -687,6 +686,17 @@ h2{
         width: 90vw;
     }
     .user-form-submit input{
+        width: 90vw;
+    }
+
+    /* Full Tale Section*/
+    .edit-delete{
+        width: 90vw;
+    }
+    .fulltale-views-likes{
+        width: 90vw;
+    }
+    .fulltale-content{
         width: 90vw;
     }
 

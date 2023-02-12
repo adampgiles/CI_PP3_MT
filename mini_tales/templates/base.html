@@ -16,6 +16,7 @@
                 <div class="site-logo">
                     <h1><a href="{{ url_for( 'tales.get_tales') }}"><i class="fa-solid fa-book"></i>Mini Tales</a></h1> 
                 </div>
+                <!-- Navigation Bar - My Tales and Log Out links only show if a user is logged in -->
                 <div class="navigation-bar">
                     <ul>
                         <li><a href="{{ url_for('tales.get_tales') }}">Explore Tales</a></li>
@@ -30,7 +31,7 @@
             </header>
             
             <section>
-                <!-- flash messages -->
+                <!-- Flash Messages -->
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
                         {% for message in messages %}
@@ -40,7 +41,7 @@
                         {% endfor %}
                     {% endif %}
                 {% endwith %}
-
+                <!-- Validation Messages -->
                 <div id="validation-alert-container" class="validation-alert-container">
                     <h4 id="validation-alerts"></h4>
                 </div>
@@ -58,6 +59,7 @@
     </div>
 
     <footer>
+        <!-- Credits link for website background image -->
         <div class="footer-link">
             <a href="https://www.freepik.com/free-vector/book-shelves-dtcorative-colorful-icon-poster_2871137.htm#query=books&position=7&from_view=search&track=sph">Background Image by macrovector</a> on Freepik
         </div>
@@ -66,5 +68,4 @@
     <!-- Validation Script Link -->
     <script src="{{ url_for('static', filename='js/validation.js') }}"></script>    
 </body>
-
 </html>

@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- Full Tale section - Shows all of the selected tales content -->
 <h2>{{tale.tale_title}}</h2>
-
 <div class="fulltale-section">
     <div class="fulltale-block">    
-
         <div class="fulltale-author">By {{tale.tale_author}}</div>
         
         {% if session["logged_in"] %}
@@ -38,6 +36,5 @@
             {{tale.tale_content}}
         </div>
     </div> 
-
 </div>
 {% endblock %}

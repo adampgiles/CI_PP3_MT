@@ -1,31 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>{{ username }}'s Tales</h2>
-    <div class="newtale-link">
-        <a href="{{ url_for( 'tales.newtale') }}">Add a New Tale</a>
-    </div>   
+<!-- My Tales Section - Shows all of the logged in user's submitted tales -->
+<h2>{{ username }}'s Tales</h2>
+<div class="newtale-link">
+    <a href="{{ url_for( 'tales.newtale') }}">Add a New Tale</a>
+</div>   
 
-    <div class="tale-list-section">    
-        {% for tale in tales %}
-        <div class="tale-block">
-            <a class="edit-delete" href="{{ url_for( 'tales.edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
-            <div class="tale-block-top">
-                <div class="tale-title-publish">
-                    <div class="tale-title"><a href="{{ url_for( 'tales.tale', _id=tale._id ) }}">{{tale.tale_title}}</a></div>
-                    <div class="tale-publish-date">Published: {{tale.tale_publish_date}}</div>
-                </div>
-                <div class="tale-topic">{{tale.tale_topic}}</div>
+<div class="tale-list-section">    
+    {% for tale in tales %}
+    <div class="tale-block">
+        <a class="edit-delete" href="{{ url_for( 'tales.edittale', _id=tale._id ) }}">Edit / Delete Tale</a>
+        <div class="tale-block-top">
+            <div class="tale-title-publish">
+                <div class="tale-title"><a href="{{ url_for( 'tales.tale', _id=tale._id ) }}">{{tale.tale_title}}</a></div>
+                <div class="tale-publish-date">Published: {{tale.tale_publish_date}}</div>
             </div>
-
-            <div class="tale-block-middle">{{tale.tale_blurb}}</div>
-
-            <div class="tale-block-bottom">
-                <div class="tale-author">{{tale.tale_author}}</div>
-                <div class="tale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
-                <div class="tale-likes"><i class="fa-solid fa-heart"></i>{{tale.tale_likes}}</div>
-            </div>
+            <div class="tale-topic">{{tale.tale_topic}}</div>
         </div>
-        {% endfor %}
-    </div>
 
+        <div class="tale-block-middle">{{tale.tale_blurb}}</div>
+
+        <div class="tale-block-bottom">
+            <div class="tale-author">{{tale.tale_author}}</div>
+            <div class="tale-views"><i class="fa-solid fa-eye"></i>{{tale.tale_views}}</div>
+            <div class="tale-likes"><i class="fa-solid fa-heart"></i>{{tale.tale_likes}}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

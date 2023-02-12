@@ -11,10 +11,7 @@ const usernameRegex= new RegExp(/^(?=.*[a-z])\w{6,}$/);
 // Password constrained to a minimum of 6 characters, at least one number, one lowercase letter, one uppercase letter and no special characters.
 var passwordRegex = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/);
 
-
-
 registerForm.addEventListener("submit", (event) => {
-
     let alerts = [];
 
     // Check if input fields are EMPTY

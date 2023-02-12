@@ -19,18 +19,15 @@ def register():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("authentication.register"))
-
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
             "liked_tales": []
         }
         mongo.db.users.insert_one(register)
-
         session["user"] = request.form.get("username").lower()
         flash("Account Successfully Created!")
         session["logged_in"] = True
@@ -47,7 +44,6 @@ def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
         if existing_user:
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
@@ -57,11 +53,9 @@ def login():
             else:
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("authentication.login"))
-
         else:
             flash("Incorrect Username and/or Password")
             return redirect(url_for("authentication.login"))
-
     return render_template("authentication/login.html")
 
 @authentication.route('/logout', methods=["GET","POST"])

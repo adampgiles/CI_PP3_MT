@@ -12,6 +12,7 @@ tales = Blueprint('tales', __name__)
 def get_tales():    
     """
     This function displays all tales in the tales collection on the base template.
+    The tales can be filtered using a search bar to display tales matching a keyword search.
     """  
     if session.get("search") != None:
         search = session.get("search")         
@@ -23,8 +24,7 @@ def get_tales():
             tales = mongo.db.tales.find({"$text": { "$search": search }})
     else:
         session["search"] = ""
-        tales = mongo.db.tales.find()
-        
+        tales = mongo.db.tales.find()        
     if request.method == "POST":         
         search = request.form.get("search-input") 
         print(search) 
@@ -34,17 +34,18 @@ def get_tales():
         else:            
             tales = mongo.db.tales.find({"$text": { "$search": str(search) }})
             session["search"] = search
-        return render_template("tales/tales.html", tales=tales) 
-        
+        return render_template("tales/tales.html", tales=tales)         
     if session.get("logged_in") == True:
         liked = mongo.db.users.find_one({"username": session["user"]})["liked_tales"]
         session["liked"] = liked
-        session["fulltale"] = False     
-
+        session["fulltale"] = False 
     return render_template("tales/tales.html", tales=tales)
 
 @tales.route("/clear_search", methods=["POST"])
 def clear_search():
+    """
+    This function clears the search bar and loads the tales page with all tales.
+    """  
     session["search"] = ""
     tales = mongo.db.tales.find()
     return render_template("tales/tales.html", tales=tales)

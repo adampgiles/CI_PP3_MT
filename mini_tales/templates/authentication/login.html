@@ -1,26 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="user-form-section">
-        <h2>Log in</h2>
+<!-- Login Form for user's to log into an existing account -->
+<div class="user-form-section">
+    <h2>Log in</h2>
 
-        <p class="register-link">New here? <a href="{{ url_for( 'authentication.register') }}">Register an account</a></p>
+    <p class="register-link">New here? <a href="{{ url_for( 'authentication.register') }}">Register an account</a></p>
 
-        <!-- Form instruction -->
-        <form class="login-form" method="POST" action="{{ url_for( 'authentication.login') }}">
-            <!-- Username -->
-            <label for="username">Username</label><br>
-            <div class="user-form-inputs">
-                <input type="text" id="username" name="username" required>
-            </div>
+    <!-- Form instruction -->
+    <form class="login-form" method="POST" action="{{ url_for( 'authentication.login') }}">
+        <!-- Username -->
+        <label for="username">Username</label><br>
+        <div class="user-form-inputs">
+            <input type="text" id="username" name="username" required>
+        </div>
 
-            <!-- Password -->
-            <label for="password">Password</label><br>
-            <div class="user-form-inputs">
-                <input type="password" id="password" name="password" required>
-            </div>      
-            <div class="user-form-submit">
-                <input type="submit" id="login-submit" name="login-submit" value="Log in" required>
-            </div>
-        </form>
-    </div>
+        <!-- Password -->
+        <label for="password">Password</label><br>
+        <div class="user-form-inputs">
+            <input type="password" id="password" name="password" required>
+        </div>      
+        <div class="user-form-submit">
+            <input type="submit" id="login-submit" name="login-submit" value="Log in" required>
+        </div>
+    </form>
+</div>
 {% endblock %}

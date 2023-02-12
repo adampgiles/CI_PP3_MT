@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- Search Bar -->
 <div class="search-filter-block">
     <h2>Explore Tales</h2>
     <form class="search-form" method="POST" action="{{ url_for( 'tales.get_tales') }}">
@@ -10,6 +10,7 @@
         </div>   
     </form>        
 
+    <!-- Clear Search Button - Only shows if a search query has taken place -->
     {% if session["search"] != "" %}
     <form class="clear-form" method="POST" action="{{ url_for( 'tales.clear_search') }}">
         <div class="search-clear-submit">
@@ -19,7 +20,7 @@
     {% endif %}
 </div>
 
-
+<!-- Tales section - Shows each tale dependant on search criteria -->
 <div class="tale-list-section">    
     {% for tale in tales %}
     <div class="tale-block">

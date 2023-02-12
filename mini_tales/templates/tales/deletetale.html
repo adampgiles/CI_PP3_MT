@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- Delete Tale Section - For user's to delete an existing submitted tale -->
 <div class="delete-section">
     <h2>Delete Your Tale?</h2>
 
@@ -11,5 +11,4 @@
         <div class="delete-confirm"><a href="{{ url_for( 'tales.confirmdeletetale', _id=tale._id ) }}">Yes, Delete this Tale</a></div>
     </div>  
 </div>
-
 {% endblock %}

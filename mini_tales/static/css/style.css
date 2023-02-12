@@ -637,9 +637,9 @@ h2{
     color: var(--flashes);
 }
 
-
 /* Devices with width smaller than 600px*/
 @media only screen and (max-width: 600px) {
+    /* Site Logo and Title */
     .site-logo{
         width: 100%;
         flex-basis: 100%;
@@ -651,6 +651,8 @@ h2{
         font-weight: bold;
         font-size: 200%;
     }
+
+    /* Navigation Bar */
     .navigation-bar{
         width: 100%;
     }
@@ -669,5 +671,48 @@ h2{
     h2{
         font-size: 125%;
         text-align: center;
+    }
+
+    /* Register and Log in Sections */
+    .user-form-section p{
+        width: 90vw;  
+    }
+    .user-form-section label{
+        width: 90vw;  
+    }
+    .user-form-inputs{
+        width: 90vw;
+    }
+    .user-form-inputs input{
+        width: 90vw;
+    }
+    .user-form-submit input{
+        width: 90vw;
+    }
+
+    /* New Tale and Edit Tale Sections */
+    .newtale-link a{   
+        width: 90vw;
+    }    
+    .tale-form-inputs input{
+        width: 90vw;
+    }
+    .tale-form-inputs select{
+        width: 90vw;
+    }
+    .tale-form-submit input{
+        width: 90vw;
+    }
+    .tale-blurb{
+        width: 90vw;
+    }
+    .tale-content{
+        width: 90vw;
+    }
+    .edittale-form-section p{
+        width: 90vw;  
+    }
+    .delete{
+        width: 90vw;
     }
 }

@@ -21,8 +21,8 @@
     <div class="page-container">   
         <div class="background-overlay">      
             <header>
-                <div class="site-logo">
-                    <h1><a href="{{ url_for( 'tales.get_tales') }}"><i class="fa-solid fa-book"></i>Mini Tales</a></h1> 
+                <div class="site-logo">                    
+                    <h1><a href="{{ url_for( 'tales.get_tales') }}"><img class="book-icon" src="{{ url_for('static', filename='images/book-icon.png') }}" alt="book icon">Mini Tales</a></h1> 
                 </div>
                 <!-- Navigation Bar - My Tales and Log Out links only show if a user is logged in -->
                 <div class="navigation-bar">

@@ -73,8 +73,9 @@ h1 a{
 h1 a:hover {
     color: var(--text-hover); 
 }
-.fa-book{
-    margin-right: 10px;
+.book-icon{
+    margin-right: 5px;
+    height: 24px;
 }
 .navigation-bar{
     width: 50%;

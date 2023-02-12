@@ -137,7 +137,7 @@ def tale(_id):
     This function displays the full tale that was selected on the tales page.
     """   
     _id = _id
-    mongo.db.tales.update_one({"_id" : ObjectId(_id)},{ "$inc ": {"tale_views": 1}})
+    mongo.db.tales.update_one({"_id" : ObjectId(_id)},{ "$inc" : {"tale_views" : 1}})
     tale = mongo.db.tales.find_one({"_id" : ObjectId(_id)}) 
     if session.get("logged_in") == True: 
         liked = mongo.db.users.find_one({"username" : session["user"]})["liked_tales"]

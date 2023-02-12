@@ -582,7 +582,7 @@ h2{
     box-shadow: 0 2px var(--box-shadows);
 }
 
-/* Login Section*/
+/* Register Section*/
 .register-form-section{
     display: flex;    
     flex-direction: column;
@@ -628,9 +628,15 @@ h2{
 
 /* Footer*/
 .footer-link{
-    padding: 10px 0 10px 0;
     background-color: var(--off-white);
 }
+.footer-link p{
+    padding: 4px 0 4px 0;
+}
+.footer-link p a{
+    color: var(--flashes);
+}
+
 
 /* Devices with width smaller than 600px*/
 @media only screen and (max-width: 600px) {

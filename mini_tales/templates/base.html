@@ -44,14 +44,14 @@
                     {% if messages %}
                         {% for message in messages %}
                             <div class="flashes">
-                                <h4 id="validation-flashes">{{ message }}</h4>
+                                <p id="validation-flashes">{{ message }}</p>
                             </div>
                         {% endfor %}
                     {% endif %}
                 {% endwith %}
                 <!-- Validation Messages -->
                 <div id="validation-alert-container" class="validation-alert-container">
-                    <h4 id="validation-alerts"></h4>
+                    <p id="validation-alerts"></p>
                 </div>
             </section>
             

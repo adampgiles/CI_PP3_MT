@@ -337,7 +337,7 @@ h2{
     align-items: center;
 }
 .fulltale-block{
-    padding: 0 10vw 0 10vw;
+    width: 80%;
 }
 .fulltale-author{
     font-weight: 700;
@@ -345,6 +345,7 @@ h2{
     color: var(--off-white);
     text-shadow: 0 2px 5px var(--text-shadows);    
     margin: 0 0 20px 0;
+    width: 100%;
 }
 .edit-delete{
     color: var(--base-text);
@@ -377,7 +378,7 @@ h2{
     margin: 20px 0 10px 0;
 }
 .fulltale-views-likes div{
-    margin: 5px 20px 5px 20px;
+    margin: 5px 0 5px 0;
 }
 .fulltale-views{ 
     border-radius: 2px; 
@@ -806,10 +807,7 @@ h2{
     }
 
     /* Full Tale Section*/
-    .fulltale-views-likes{
-        width: 95%;
-    }
-    .fulltale-content{
+    .fulltale-block{
         width: 95%;
     }
 

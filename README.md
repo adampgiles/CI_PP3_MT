@@ -20,7 +20,10 @@
     - [Languages](#languages)
     - [Frameworks, Libraries & Tools](#frameworks-libraries--tools)
 - [Features](#features)
-    - [Future Features](#future-features)
+- [Validation](#validation)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [JS Validation](#js-validation)
 
 ## Project Goals
 Mini Tales is a short story sharing website. Users can create an account to share, read, search for and upvote short stories.
@@ -78,53 +81,53 @@ The website structure consists of the main "Base" page, with the following secti
 The pages are detailed below;
 
 <details><summary>Base Page</summary>
-<img src="mini_tales/static/images/readme/base_header.JPG">
-<img src="mini_tales/static/images/readme/base_footer.JPG">
+<img src="mini_tales/static/images/readme/structure/base_header.JPG">
+<img src="mini_tales/static/images/readme/structure/base_footer.JPG">
 </details>
 - This page contains a header; consisting of Site Logo and Navigation Bar (Links change if the user is logged in). Also a footer; consisting of a credits link, disclaimer and copyright notice. 
 
 <details><summary>Explore Tales Page</summary>
-<img src="mini_tales/static/images/readme/tales_page.JPG">
+<img src="mini_tales/static/images/readme/structure/tales_page.JPG">
 </details>
 - This page contains a search bar and a block for each submitted tales. Each block shows all the tales details, except for the tale story. Users can also click the like link when logged in, to like/unlike a tale. A clear search button displays if a search is conducted.
 
 <details><summary>Log in Page</summary>
-<img src="mini_tales/static/images/readme/login_page.JPG">
+<img src="mini_tales/static/images/readme/structure/login_page.JPG">
 </details>
 - This page contains a form for the user to complete that will log them into the site.
 
 <details><summary>Register Page</summary>
-<img src="mini_tales/static/images/readme/register_page.JPG">
+<img src="mini_tales/static/images/readme/structure/register_page.JPG">
 </details>
 - This page contains a form for the user to complete that will create an account and log them into the site.
 
 <details><summary>Tale Page</summary>
-<img src="mini_tales/static/images/readme/tale_page.JPG">
+<img src="mini_tales/static/images/readme/structure/tale_page.JPG">
 </details>
 - This page displays all the content of a tale for a user to read. If the user is logged in and this tale is theirs, a button to edit/delete the tale is displayed.
 
 <details><summary>My Tales Page</summary>
-<img src="mini_tales/static/images/readme/my_tales_page.JPG">
+<img src="mini_tales/static/images/readme/structure/my_tales_page.JPG">
 </details>
 - This page displays all the currently logged in user's tales. A button to edit/delete the tale is displayed on each tales. Also a button is displayed for the user to submit a new tale.
 
 <details><summary>New Tale Page</summary>
-<img src="mini_tales/static/images/readme/new_tale_page.JPG">
+<img src="mini_tales/static/images/readme/structure/new_tale_page.JPG">
 </details>
 - This page contains a form for the user to complete that will submit a tale to the site.
 
 <details><summary>Edit Tale Page</summary>
-<img src="mini_tales/static/images/readme/edit_tale_page.JPG">
+<img src="mini_tales/static/images/readme/structure/edit_tale_page.JPG">
 </details>
 - This page contains a form for the user to complete that will allow them to edit an existing submitted tale. Also a button is displayed for the user to delete the tale.
 
 <details><summary>Delete Tale Page</summary>
-<img src="mini_tales/static/images/readme/delete_tale_page.JPG">
+<img src="mini_tales/static/images/readme/structure/delete_tale_page.JPG">
 </details>
 - This page contains buttons for the user to confirm or cancel a deletion request.
 
 <details><summary>404 Page</summary>
-<img src="mini_tales/static/images/readme/error_page.JPG">
+<img src="mini_tales/static/images/readme/structure/error_page.JPG">
 </details>
 - A 404 page was created to ensure that a user can easily navigate back to the main site if they encounter a page which does not exist.
 
@@ -148,21 +151,21 @@ The pages are detailed below;
 
 #### Conceptual Database Model
 <details><summary>Conceptual Database Model Image</summary>
-<img src="mini_tales/static/images/readme/conceptual_design_model.png">
+<img src="mini_tales/static/images/readme/database/conceptual_design_model.png">
 </details>
 
 - To aid with planning the database creation, I started by create a Conceptual Database Model.
 
 #### Physical Database Model
 <details><summary>Physical Database Model Image</summary>
-<img src="mini_tales/static/images/readme/physical_design_model.png">
+<img src="mini_tales/static/images/readme/database/physical_design_model.png">
 </details>
 
 - After completing the Conceptual Database Model, I created a Physical Database Model. This model reflects the structure of the database on MongoDB.
 
 #### MongoDB Database
 <details><summary>Mongo Database Image</summary>
-<img src="mini_tales/static/images/readme/mongo_database.JPG">
+<img src="mini_tales/static/images/readme/database/mongo_database.JPG">
 </details>
 
 - One database called "short_stories" was created to store two collections; 
@@ -171,7 +174,7 @@ The pages are detailed below;
 
 #### Users Collection
 <details><summary>Users Collection Image</summary>
-<img src="mini_tales/static/images/readme/mongo_users_collection.JPG">
+<img src="mini_tales/static/images/readme/database/mongo_users_collection.JPG">
 </details>
 
 - When a user creates a new account, a document is created and stored in this collection.
@@ -183,7 +186,7 @@ The pages are detailed below;
 
 #### Tales Collection
 <details><summary>Tales Collection Image</summary>
-<img src="mini_tales/static/images/readme/mongo_tales_collection.JPG">
+<img src="mini_tales/static/images/readme/database/mongo_tales_collection.JPG">
 </details>
 
 - When a user submits a new tale, a document is created and the data is stored in this collection.
@@ -302,3 +305,26 @@ The website consists of nine pages with ten features.
 ### 404 Page
 - This page is display when a user encounters a page that does not exist (HTTP 404 response code).
 - The user is provided with a link to return to the Explore Tales page.
+
+## Validation
+
+### HTML Validation
+
+W3C Markup Validation Service was utilised to validate the HTML of the website. The website's pages passes with no errors.
+<details><summary>Website</summary>
+<img src="mini_tales/static/images/readme/validation/html_validation.JPG">
+</details>
+
+### CSS Validation
+
+W3C Jigsaw CSS Validation Service was utilised to validate the website's CSS. When validating the website, 0 errors are found.
+<details><summary>Website</summary>
+<img src="mini_tales/static/images/readme/validation/css_validation.JPG">
+</details>
+
+### JS Validation
+
+JSHint was utilised to validate the website's JS. 0 errors are found. 
+<details><summary>validation.js</summary>
+<img src="mini_tales/static/images/readme/validation/css_validation.JPG">
+</details>

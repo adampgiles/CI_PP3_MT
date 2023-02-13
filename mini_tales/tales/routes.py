@@ -68,7 +68,7 @@ def newtale():
     if request.method == "POST":
         usertale = {
             "tale_title" : request.form.get("title"),
-            "tale_blurb" : request.form.get("blurb"),
+            "tale_blurb" : request.form.get("tale-blurb"),
             "tale_topic" : request.form.get("topic"),
             "tale_content" : request.form.get("tale-content"),
             "tale_likes" : 0,
@@ -96,7 +96,7 @@ def edittale(_id):
             {"_id" : ObjectId(_id)},
             { "$set" : {
             "tale_title" : request.form.get("title"),
-            "tale_blurb" : request.form.get("blurb"),
+            "tale_blurb" : request.form.get("tale-blurb"),
             "tale_topic" : request.form.get("topic"),
             "tale_content" : request.form.get("tale-content"),
             "tale_likes" : 0,

@@ -19,6 +19,8 @@
 - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks, Libraries & Tools](#frameworks-libraries--tools)
+- [Features](#features)
+    - [Future Features](#future-features)
 
 ## Project Goals
 Mini Tales is a short story sharing website. Users can create an account to share, read, search for and upvote short stories.
@@ -217,3 +219,64 @@ The pages are detailed below;
 - [Google Fonts](https://fonts.google.com/), used to acquire the site's font.
 - [Lucidchart](http://lucidchart.com), used to create database design diagrams.
 - [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/), [Wave Validator](https://wave.webaim.org/), [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Am I Responsive](http://ami.responsivedesign.is/), used to test the site's code, performance, accessibility and responsiveness. 
+
+## Features
+
+The website consists of nine pages with ten features.
+
+### Navigation Bar
+- Situated in a persistent position at the top of every page.
+- Contains links to the other website pages.
+- Available links change if the user is logged into the website;
+    - Logged out: "Explore Tales", "Login" and "Register".
+    - Logged in: "Explore Tales", "My Tales" and "Log out".
+- When hovering over a link on Desktop devices the link colour changes and a bottom border line is shown. This gives visible notification to the user that the link is clickable.
+- Meets user stories: 1, 2, 7, 8, 9.
+
+### Search Bar and Clear Search Button
+- Situated at the top of the Explore Tales page.
+- User's can conduct keyword searches which will then only display tales that contain the keyword.
+- The search criteria is maintained when reloading the page and can be cleared with the Clear Search button.
+- The Clear Search button is only visible if a search has been conducted.
+- Meets user stories: 5, 10.
+
+### Explore Tales Section
+- Situated on the Explore Tales page.
+- This section displays a "tale block" for each submitted tale (Which tales show depends on any search criteria).
+- Each "tale block" contains the Tale's Title, Publish Date, Topic, Blurb, Author, View Count and Like Count.
+- The Tale Title can be clicked, which will then take the user to the Tale page, which shows the Tale's Content.
+- The Like Count can also be clicked if the User is logged in, which increases/decrease the value by 1 depending on if the user has already liked the tale. The "Heart" icon is coloured red if the user likes the tale, providing visual notification to the user.
+- Meets user story: 6.
+
+### My Tales Section
+- This page displays a "tale block" for each of the current logged in user's submitted tales.
+- Each "tale block" contains the Tale's Title, Publish Date, Topic, Blurb, Author, View Count and Like Count.
+- Each "tale block" also has a button at the top to "Edit/Delete Tale". This takes the user to a page where the tale can be edited.
+- The Tale Title can be clicked, which will then take the user to the Tale page, which shows the Tale's Content.
+- There is a button to "Add a New Tale" which will take the user to a tale submission page.
+- Meets user story: 2, 3, 4.
+
+### New Tale Section
+- This page contains a form for the user to submit a tale to the website.
+- The user completed input fields for the Tale's Title (Text), Topic (Dropdown), Blurb (Textarea) and Your Tale (Textarea).
+- The user then clicks a submit button, which adds the tale to the tales database collection.
+- The tale title is limited to 30 characters and the blurb to 400.
+- Meets user story: 2.
+
+### Edit Tale Section
+- This page contains a form for the user to Edit one of their submitted tales.
+- The user completed input fields for the Tale's Title (Text), Topic (Dropdown), Blurb (Textarea) and Your Tale (Textarea).
+- The above fields are pre-populated with the existing tale data when the page loads
+- The user then clicks a submit button, which updates the tale's database collection document.
+- The publish date is set to the submission date, The view count to 0 and like count to 0.
+- If any other user's have liked the tale, the tale's ObjectId is removed from the liked_tales field for that user.
+- The tale title is limited to 30 characters and the blurb to 400.
+- There is a button to "Delete this Tale", which takes the user to the Confirm Delete page.
+- Meets user story: 3.
+
+### Delete Tale Section
+- This page contains text asking if the user is sure they want to delete the tale and two buttons.
+- A button for "Yes, Delete this Tale" to delete the tale, when clicked this deletes the tale's database collection document and returns the user to the My Tales page.
+- A button to "No, Go Back!", when clicked returns the user to the Edit Tale page
+- Meets user story: 4.
+

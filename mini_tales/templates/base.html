@@ -39,7 +39,7 @@
                 </div>
             </header>
             
-            <section>
+            <div>
                 <!-- Flash Messages -->
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
@@ -54,7 +54,7 @@
                 <div id="validation-alert-container" class="validation-alert-container">
                     <p id="validation-alerts"></p>
                 </div>
-            </section>
+            </div>
             
             <main>
                 {% block content %}

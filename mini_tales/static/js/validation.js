@@ -1,5 +1,5 @@
 // Set input and alert elements
-const registerForm = document.getElementById("register-form") 
+const registerForm = document.getElementById("register-form"); 
 const formAlertContainer = document.getElementById("validation-alert-container");
 const formAlert = document.getElementById("validation-alerts");
 const username = document.getElementById("register-username");
@@ -36,4 +36,4 @@ registerForm.addEventListener("submit", (event) => {
         formAlertContainer.style.display = "block";
         formAlert.innerHTML = alerts.join('<br>');
     }
-})
+});

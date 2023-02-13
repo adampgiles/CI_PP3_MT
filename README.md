@@ -328,3 +328,13 @@ JSHint was utilised to validate the website's JS. 0 errors are found.
 <details><summary>validation.js</summary>
 <img src="mini_tales/static/images/readme/validation/css_validation.JPG">
 </details>
+
+## Testing
+
+### Accessibility
+
+WAVE WebAIM web accessibility evaluation tool was utilised to ensure the website met accessibility standards, passed with 0 errors.
+
+<details><summary>Accessibility Test Result</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility_validation.JPG">
+</details>

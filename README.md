@@ -463,7 +463,8 @@ Mongodb is the database used in the application
 
 ## Credits
 
-### Images/Icons
+### Images/Icons/Font
+- Font from [Google-Fonts](https://fonts.google.com/)
 - All website Icons taken from [FontAwesome](https://fontawesome.com/).
 - Website background image from [FreePix](https://www.freepik.com/free-vector/book-shelves-dtcorative-colorful-icon-poster_2871137.htm#query=books&position=7&from_view=search&track=sph).
 

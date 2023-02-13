@@ -395,3 +395,17 @@ The website was tested on the following browsers:
 | edittale.html, tale topic dropdown not populating with current tale topic                       | Added if statements on edittale.html                                                                                                     |
 | Elements overflow page when zooming in/out                                                      | Changed instances of vw to %                                                                                                             |
 | Horizontal scroll showing on login and register pages                                           | Fixed container widths for desktop and mobile                                                                                            |
+
+## Credits
+
+### Images/Icons
+- All website Icons taken from [FontAwesome](https://fontawesome.com/).
+- Website background image from [FreePix](https://www.freepik.com/free-vector/book-shelves-dtcorative-colorful-icon-poster_2871137.htm#query=books&position=7&from_view=search&track=sph).
+
+### Learning Resources
+- I used the following YouTube video to gain an understanding of Blueprints - [Corey Schafer - YouTube](https://www.youtube.com/watch?v=Wfx4YBzg16s&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=12)
+
+## Acknowledgements
+Thank you to the following individuals for their support during the creation of this website; 
+- Mo Shami, my Mentor, who provided excellent guidance and feedback throughout. 
+- My partner and friends, for supporting with device testing.

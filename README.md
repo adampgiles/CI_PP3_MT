@@ -14,6 +14,7 @@
     - [Colour](#colour)
     - [Fonts](#font)
     - [Structure](#structure)
+    - [Wireframe](#wireframe)
     - [Code Structure](#Code-Structure)
     - [Database](#Database)
 - [Technologies Used](#technologies-used)
@@ -136,6 +137,14 @@ The pages are detailed below;
 <img src="mini_tales/static/images/readme/structure/error_page.JPG">
 </details>
 - A 404 page was created to ensure that a user can easily navigate back to the main site if they encounter a page which does not exist.
+
+
+### Wireframes
+
+<details><summary>Wireframes</summary>
+<img src="mini_tales/static/images/readme/structure/wireframe.png">
+- I created wireframes for mobile devices. The website uses flexbox to maintain the element layout when changing screen size and very little media queries are used, therefore I did not feel it was necessary to produce desktop wireframes.
+</details>
 
 ### Code Structure
 - The website was built using Flask Blueprints; separating the site into smaller parts.
@@ -311,6 +320,13 @@ The website consists of nine pages with ten features.
 ### 404 Page
 - This page is display when a user encounters a page that does not exist (HTTP 404 response code).
 - The user is provided with a link to return to the Explore Tales page.
+
+### Responsive Design
+<details><summary>Responsive Design</summary>
+<img src="mini_tales/static/images/readme/structure/error_page.JPG">
+</details>
+- The website is full responsive on desktop to mobile devices.
+- Meets user story: 11.
 
 ## Validation
 

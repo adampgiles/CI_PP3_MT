@@ -607,19 +607,19 @@ h2{
     align-items: center;   
 }
 .login-form{
-    width: 100%;
+    width: 60%;
 }
 .user-form-section p{
-    width: 80%;
-    margin: 30px;
+    width: 100%;
+    margin: 30px 0 30px 0;
     font-size: 125%;
     font-weight: 700;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .user-form-section label{
-    width: 60%;
-    margin: 10px;
+    width: 100%;
+    margin: 10px 0 10px 0;
     font-size: 125%;
     font-weight: 700;
     color: var(--off-white-text);
@@ -632,26 +632,29 @@ h2{
     color: var(--off-white);
 }
 .user-form-inputs{
-    margin: 20px;
-    width: 60;
+    margin: 20px 0 20px 0;
+    width: 100%;
 }
 .user-form-inputs input{
     border: 2px solid var(--base-border);
     border-radius: 10px;
     background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
-    width: 60%;
+    width: 100%;
+}
+.user-form-submit{
+    width: 100%;
 }
 .user-form-submit input{
     color: var(--base-text);
-    font-size: large;
+    font-size: 150%;
     font-weight: 700;
     border: 2px solid var(--off-white);
     border-radius: 10px;
     background-color: var(--button-bg);
+    width: 100%;
     padding: 15px;
-    width: 60%;
-    margin: 20px;
+    margin: 20px 0 20px 0;
     box-shadow: 0 2px var(--box-shadows);
 }
 .user-form-submit input:hover{
@@ -666,32 +669,32 @@ h2{
     align-items: center;    
 }
 .register-form{
-    width: 100%;
+    width: 60%;
 }
 .register-form-section p{
-    width: 80%;
+    width: 100%;
     margin: 30px;
     font-size: 125%;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .register-form-section label{
-    width: 60%;
+    width: 100%;
     margin: 10px;
     font-size: 125%;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .register-form-inputs{
-    margin: 20px;
-    width: 80%;
+    margin: 20px 0 20px 0;
+    width: 100%;
 }
 .register-form-inputs input{
     border: 2px solid var(--base-border);
     border-radius: 10px;
     background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
-    width: 80%;
+    width: 100%;
 }
 .register-form-submit input{
     color: var(--base-text);
@@ -701,7 +704,7 @@ h2{
     border-radius: 10px;
     background-color: var(--button-bg);
     padding: 15px;
-    width: 80%;
+    width: 100%;
     margin: 20px;
     box-shadow: 0 2px var(--box-shadows);
 }
@@ -795,20 +798,11 @@ h2{
         width: 475px;
     }
     /* Register and Log in Sections */
-    .user-form-section p{
+    .login-form{
         width: 95%;  
     }
-    .user-form-section label{
+    .register-form{
         width: 95%;  
-    }
-    .user-form-inputs{
-        width: 95%;
-    }
-    .user-form-inputs input{
-        width: 95%;
-    }
-    .user-form-submit input{
-        width: 95%;
     }
 
     /* Full Tale Section*/

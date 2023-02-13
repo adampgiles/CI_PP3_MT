@@ -14,6 +14,7 @@
     - [Colour](#colour)
     - [Fonts](#font)
     - [Structure](#structure)
+    - [Code Structure](#Code-Structure)
 - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks, Libraries & Tools](#frameworks-libraries--tools)
@@ -123,6 +124,19 @@ The pages are detailed below;
 <img src="mini_tales/static/images/readme/error_page.JPG">
 </details>
 - A 404 page was created to ensure that a user can easily navigate back to the main site if they encounter a page which does not exist.
+
+### Code Structure
+- The website was built using Flask Blueprints; separating the site into smaller parts.
+- The website has the following structure;
+    - authentication: This folder contains a flask route for authentication, which includes functions for "login", "register" and "logout".
+    - tales: This folder contains a flask route for tales, which includes functions for all tale related actions; "get_tales", "clear_search", "my_tales", "newtale", "edittale", "deletetale", "confirmdeletetale", "tale" and "like_tale".
+    - static: This folder contains the following sub-folders;
+      - css: This folder contains the website's CSS stylesheet.
+      - images: This folder contains folders for; "favicon_io"(Website favicon icons) and "readme"  (Images for this README file).
+      - js: This folder contains the "validation.js" Javascript file, which is used for the Register page.
+    - templates: This folder contains two folders for; the authentication HTML pages and the tales HTML pages. Also the base.html and 404.html files are stored in the templates folder.
+    - app.py: This file creates and runs the website application.
+    - env.py: This file is used to ensure passwords and security-sensitive information are stored securely in environment variables. This file is added to .gitignore, this file is never committed to the repository.
 
 ## Technologies Used
 

@@ -140,6 +140,17 @@ h2{
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
 
+/* Introduction Section */
+.introduction p{
+    width: 100%;
+    padding: 10px 0 10px 0;
+    font-size: 100%;
+    font-weight: 700;
+    text-align: center;
+    color: var(--base-text);
+    background: var(--button-bg);   
+}
+
 /* Explore Tales Search Bar */
 .search-filter-block{
     width: 100%;

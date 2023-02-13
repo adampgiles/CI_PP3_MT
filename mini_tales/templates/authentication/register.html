@@ -9,15 +9,15 @@
 
     <form id="register-form" class="register-form" method="POST" action="{{ url_for( 'authentication.register') }}">       
         <!-- Username -->
-        <label for="username">Username</label>
+        <label for="register-username">Username</label>
         <div class="user-form-inputs">
-            <input type="text" id="register-username" name="username">
+            <input type="text" id="register-username" name="register-username">
         </div>
 
         <!-- Password -->
-        <label for="password">Password</label>
+        <label for="register-password">Password</label>
         <div class="user-form-inputs">
-            <input type="password" id="register-password" name="password">
+            <input type="password" id="register-password" name="register-password">
         </div>
 
         <!-- Confirm Password -->

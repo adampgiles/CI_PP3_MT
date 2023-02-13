@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
 /* Global variables for site colours */
 :root {
     --site-logo: rgb(10, 10, 10);
@@ -21,6 +23,7 @@
     margin: 0;
     padding: 0;
     font-size: 100%;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* Body */
@@ -63,7 +66,7 @@ h1{
     margin: 0 0 10px 0;    
     padding: 5px;
     float: left;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 200%;
 }
 h1 a{
@@ -103,7 +106,7 @@ h1 a:hover {
 .navigation-bar ul li a{
     margin: auto;
     color: var(--base-text);
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -131,7 +134,7 @@ h2{
     width: 100%;
     padding: 10px 0 10px 0;
     font-size: 160%;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
@@ -144,7 +147,7 @@ h2{
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .search-bar label{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 110%;   
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
@@ -160,7 +163,7 @@ h2{
 .search-clear-submit button{
     color: black;
     font-size: large;
-    font-weight: bold;
+    font-weight: 700;
     border: 2px solid var(--off-white);
     border-radius: 10px;
     background-color: var(--button-bg);
@@ -213,7 +216,7 @@ h2{
     margin: 1px;
 }
 .tale-title{
-    font-weight: bold;
+    font-weight: 700;
     width: 100%;
 }
 .tale-title a{
@@ -228,7 +231,7 @@ h2{
     padding: 2px; 
 }
 .tale-topic{ 
-    font-weight: bold;
+    font-weight: 700;
     width: 30%;
     height: 100%;
     background-color: var(--off-white); 
@@ -264,7 +267,7 @@ h2{
     align-items: center; 
 }
 .tale-author{ 
-    font-weight: bold;
+    font-weight: 700;
     width: 50%; 
     height: 100%;
     background-color: var(--off-white);  
@@ -283,7 +286,6 @@ h2{
 .tale-views svg{
     margin-right: 5px;
 }
-
 .tale-likes{
     width: 25%;
     height: 100%; 
@@ -311,7 +313,7 @@ h2{
     padding: 0 10vw 0 10vw;
 }
 .fulltale-author{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 125%;   
     color: var(--off-white);
     text-shadow: 0 2px 5px var(--text-shadows);    
@@ -319,7 +321,7 @@ h2{
 }
 .edit-delete{
     color: var(--base-text);
-    font-weight: bold;
+    font-weight: 700;
     width: 100%;
     margin: auto;
     text-decoration: none;
@@ -387,7 +389,7 @@ h2{
 }
 .newtale-link a{    
     color: var(--base-text);
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     width: 50vw;
     padding: 2px;
@@ -411,7 +413,7 @@ h2{
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);    
     font-size: large;
-    font-weight: bold;
+    font-weight: 700;
     margin: 20px;
 }
 .tale-form-inputs{
@@ -436,7 +438,7 @@ h2{
 .tale-form-submit input{
     color: var(--base-text);
     font-size: large;
-    font-weight: bold;
+    font-weight: 700;
     border: 2px solid var(--off-white);
     border-radius: 10px;
     background-color: var(--button-bg);
@@ -481,11 +483,11 @@ h2{
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);    
     font-size: large;
-    font-weight: bold;
+    font-weight: 700;
 }
 .delete{
     color: var(--off-white);
-    font-weight: bold;
+    font-weight: 700;
     width: 50vw;
     text-decoration: none;
     padding: 5px;
@@ -506,13 +508,13 @@ h2{
     width: 80vw;
     margin: 10px;
     font-size: 125%;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .delete-choices div{
     font-size: large;
-    font-weight: bold;
+    font-weight: 700;
     padding: 10px;
     border: 2px solid var(--off-white);  
     border-radius: 5px;
@@ -545,6 +547,7 @@ h2{
     width: 80vw;
     margin: 30px;
     font-size: 125%;
+    font-weight: 700;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
@@ -552,6 +555,7 @@ h2{
     width: 60vw;
     margin: 10px;
     font-size: 125%;
+    font-weight: 700;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
@@ -572,7 +576,7 @@ h2{
 .user-form-submit input{
     color: var(--base-text);
     font-size: large;
-    font-weight: bold;
+    font-weight: 700;
     border: 2px solid var(--off-white);
     border-radius: 10px;
     background-color: var(--button-bg);
@@ -616,7 +620,7 @@ h2{
 .register-form-submit input{
     color: var(--base-text);
     font-size: large;
-    font-weight: bold;
+    font-weight: 700;
     border: 2px solid var(--off-white);
     border-radius: 10px;
     background-color: var(--button-bg);
@@ -648,7 +652,7 @@ h2{
         margin: 0;    
         padding: 5px;
         float: none;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 200%;
     }
 

@@ -34,6 +34,7 @@ registerForm.addEventListener("submit", (event) => {
     if(alerts.length > 0){        
         event.preventDefault();
         formAlertContainer.style.display = "block";
-        formAlert.innerHTML = alerts.join('<br>');
+        formAlert.innerHTML = alerts.join('<br>');        
+        window.scrollTo(0, 0);
     }
 });

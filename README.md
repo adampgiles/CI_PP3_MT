@@ -376,3 +376,22 @@ The following resolutions were tested using a Windows desktop PC;
 The website was tested on the following browsers:
 - Google Chrome
 - Mozilla Firefox
+
+## Bugs
+
+| Bug                                                                                             | Fix                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------| -----------------------------------------------------------------------------------------------------------------------------------------|
+| tales.html not loading if user had not liked any tales                                          | Removed print statement from app.py                                                                                                      |
+| error caused by liking a tale on tale.html when not logged in                                   | Added statement to tales.html to check is logged in before displaying likes as a                                                         |
+| User liked a tale that is edited, likes rest on tale but user still had a like against the tale | Removed the tale id from all user liked_tales when a tale is edited                                                                      |
+| User's could like their own tales.                                                              | Now checking if the tale is not the users before showing the likes as a link                                                             |
+| Search results cleared if user likes a tale                                                     | Search criteria now saves when page refreshes                                                                                            |
+| tale.html, if user likes the tale the view count increases by 1                                 | 1 removed from the tale view count when tale like link is clicked                                                                        |
+| tales.html, if user likes the tale the view count decreases by 1                                | Created session variable to show true if viewing full tale page, to stop the count decreasing                                            |
+| tale.html, is user likes the tale the view count increase by 1                                  | 1 removed from the tale view count when tale like link is clicked                                                                        |
+| Blurb not populating on edittale.html                                                           | Added reference to tale_blurb in blurb textarea                                                                                          |
+| tale.html not loading when title clicked on tales.html                                          | Removed space after $inc in tales routes.py                                                                                              |
+| Blurb not adding to database when editing or submitting a new tale                              | Correctly set blurb id in html and py files                                                                                              |
+| edittale.html, tale topic dropdown not populating with current tale topic                       | Added if statements on edittale.html                                                                                                     |
+| Elements overflow page when zooming in/out                                                      | Changed instances of vw to %                                                                                                             |
+| Horizontal scroll showing on login and register pages                                           | Fixed container widths for desktop and mobile                                                                                            |

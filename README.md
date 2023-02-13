@@ -60,6 +60,7 @@ User stories have been separated into two groups; Site Users and Site Owner.
 ### Colour
 The site's colour scheme consists of four key colours; White, black, yellow and red. White is used for input fields and text background. Black is used for text, icons and borders. Yellow is for buttons, links and key information. Red is used for delete buttons and alert messages.
 <details><summary>Key Colours</summary>
+<img src="mini_tales/static/images/readme/colour_scheme.JPG">
 </details>
 
 ### Font
@@ -73,52 +74,53 @@ The website structure consists of the main "Base" page, with the following secti
 The pages are detailed below;
 
 <details><summary>Base Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/base_header.JPG">
+<img src="mini_tales/static/images/readme/base_footer.JPG">
 </details>
 - This page contains a header; consisting of Site Logo and Navigation Bar (Links change if the user is logged in). Also a footer; consisting of a credits link, disclaimer and copyright notice. 
 
 <details><summary>Explore Tales Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/tales_page.JPG">
 </details>
 - This page contains a search bar and a block for each submitted tales. Each block shows all the tales details, except for the tale story. Users can also click the like link when logged in, to like/unlike a tale. A clear search button displays if a search is conducted.
 
 <details><summary>Log in Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/login_page.JPG">
 </details>
 - This page contains a form for the user to complete that will log them into the site.
 
 <details><summary>Register Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/register_page.JPG">
 </details>
 - This page contains a form for the user to complete that will create an account and log them into the site.
 
 <details><summary>Tale Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/tale_page.JPG">
 </details>
 - This page displays all the content of a tale for a user to read. If the user is logged in and this tale is theirs, a button to edit/delete the tale is displayed.
 
 <details><summary>My Tales Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/my_tales_page.JPG">
 </details>
 - This page displays all the currently logged in user's tales. A button to edit/delete the tale is displayed on each tales. Also a button is displayed for the user to submit a new tale.
 
 <details><summary>New Tale Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/new_tale_page.JPG">
 </details>
 - This page contains a form for the user to complete that will submit a tale to the site.
 
 <details><summary>Edit Tale Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/edit_tale_page.JPG">
 </details>
 - This page contains a form for the user to complete that will allow them to edit an existing submitted tale. Also a button is displayed for the user to delete the tale.
 
 <details><summary>Delete Tale Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/delete_tale_page.JPG">
 </details>
 - This page contains buttons for the user to confirm or cancel a deletion request.
 
 <details><summary>404 Page</summary>
-<img src="">
+<img src="mini_tales/static/images/readme/error_page.JPG">
 </details>
 - A 404 page was created to ensure that a user can easily navigate back to the main site if they encounter a page which does not exist.
 

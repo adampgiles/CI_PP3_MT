@@ -422,7 +422,7 @@ h2{
     color: var(--base-text);
     font-weight: 700;
     text-decoration: none;
-    width: 50vw;
+    width: 50%;
     padding: 2px;
     margin: 5px;
     border: 2px solid var(--off-white); 
@@ -437,6 +437,9 @@ h2{
     display: flex;    
     flex-direction: column;
     align-items: center;
+}
+.newtale-form{
+    width: 100%;
 }
 .newtale-form-section p{
     margin: 10px;
@@ -459,7 +462,7 @@ h2{
     border-radius: 10px;
     background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
-    width: 80vw;    
+    width: 80%;    
     box-shadow: 0 2px var(--box-shadows);
 }
 .tale-form-inputs select{
@@ -467,7 +470,7 @@ h2{
     border-radius: 10px;
     background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
-    width: 80vw;    
+    width: 80%;    
     box-shadow: 0 2px var(--box-shadows);
 }
 .tale-form-submit input{
@@ -478,7 +481,7 @@ h2{
     border-radius: 10px;
     background-color: var(--button-bg);
     padding: 7.5px 15px 7.5px 15px;
-    width: 80vw;
+    width: 80%;
     margin: 10px;
     box-shadow: 0 2px var(--box-shadows);
 }
@@ -491,7 +494,7 @@ h2{
     border-radius: 10px;
     background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
-    width: 80vw;
+    width: 80%;
     height: 200px;    
     box-shadow: 0 2px var(--box-shadows);
 }
@@ -500,7 +503,7 @@ h2{
     border-radius: 10px;
     background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
-    width: 80vw;
+    width: 80%;
     height: 600px;
     box-shadow: 0 2px var(--box-shadows);
 }
@@ -511,8 +514,11 @@ h2{
     flex-direction: column;
     align-items: center;
 }
+.edittale-form{
+    width: 100%;
+}
 .edittale-form-section p{
-    width: 80vw;
+    width: 80%;
     margin: 10px;
     font-size: 125%;
     color: var(--off-white-text);
@@ -527,7 +533,7 @@ h2{
 .delete{
     color: var(--base-text);
     font-weight: 700;
-    width: 50vw;
+    width: 80%;
     text-decoration: none;
     padding: 5px;
     margin: 5px 0 10px 0;
@@ -547,22 +553,28 @@ h2{
     flex-direction: column;
     align-items: center;    
 }
+.delete-choices{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;  
+    width: 100%;
+}
 .delete-section p{
-    width: 80vw;
-    margin: 10px;
+    width: 80%;
+    margin: 20px;
     font-size: 125%;
     font-weight: 700;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
-.delete-choices div{
+.delete-choices div{     
     font-size: large;
     font-weight: 700;
     padding: 10px;
     border: 2px solid var(--off-white);  
     border-radius: 5px;
-    margin: 20px;
-    width: 60vw;
+    margin: 10px;
+    width: 60%;
 }
 .delete-choices a{
     text-decoration: none;    
@@ -594,8 +606,11 @@ h2{
     flex-direction: column;
     align-items: center;   
 }
+.login-form{
+    width: 100%;
+}
 .user-form-section p{
-    width: 80vw;
+    width: 80%;
     margin: 30px;
     font-size: 125%;
     font-weight: 700;
@@ -603,7 +618,7 @@ h2{
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .user-form-section label{
-    width: 60vw;
+    width: 60%;
     margin: 10px;
     font-size: 125%;
     font-weight: 700;
@@ -618,14 +633,14 @@ h2{
 }
 .user-form-inputs{
     margin: 20px;
-    width: 60vw;
+    width: 60;
 }
 .user-form-inputs input{
     border: 2px solid var(--base-border);
     border-radius: 10px;
     background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
-    width: 60vw;
+    width: 60%;
 }
 .user-form-submit input{
     color: var(--base-text);
@@ -635,7 +650,7 @@ h2{
     border-radius: 10px;
     background-color: var(--button-bg);
     padding: 15px;
-    width: 60vw;
+    width: 60%;
     margin: 20px;
     box-shadow: 0 2px var(--box-shadows);
 }
@@ -650,15 +665,18 @@ h2{
     flex-direction: column;
     align-items: center;    
 }
+.register-form{
+    width: 100%;
+}
 .register-form-section p{
-    width: 80vw;
+    width: 80%;
     margin: 30px;
     font-size: 125%;
     color: var(--off-white-text);
     text-shadow: 0 2px 5px var(--text-shadows);   
 }
 .register-form-section label{
-    width: 60vw;
+    width: 60%;
     margin: 10px;
     font-size: 125%;
     color: var(--off-white-text);
@@ -666,14 +684,14 @@ h2{
 }
 .register-form-inputs{
     margin: 20px;
-    width: 80vw;
+    width: 80%;
 }
 .register-form-inputs input{
     border: 2px solid var(--base-border);
     border-radius: 10px;
     background-color: var(--off-white);
     padding: 7.5px 15px 7.5px 15px;
-    width: 80vw;
+    width: 80%;
 }
 .register-form-submit input{
     color: var(--base-text);
@@ -683,7 +701,7 @@ h2{
     border-radius: 10px;
     background-color: var(--button-bg);
     padding: 15px;
-    width: 80vw;
+    width: 80%;
     margin: 20px;
     box-shadow: 0 2px var(--box-shadows);
 }
@@ -703,8 +721,12 @@ h2{
     color: var(--flashes);
 }
 
-/* Devices with width smaller than 600px*/
-@media only screen and (max-width: 600px) {
+/* Devices with width smaller than 500px*/
+@media only screen and (max-width: 500px) {
+    *{
+        font-size: 97%;
+    }
+
     /* Site Logo and Title */
     .site-logo{
         width: 100%;
@@ -715,7 +737,6 @@ h2{
         padding: 5px;
         float: none;
         font-weight: 700;
-        font-size: 200%;
     }
 
     /* Navigation Bar */
@@ -735,58 +756,63 @@ h2{
     }
 
     h2{
-        font-size: 125%;
+        font-size: 100%;
         text-align: center;
     }
 
+    .tale-block{
+        margin-bottom: 10px;
+        height: 325px;
+        width: 475px;
+    }
     /* Register and Log in Sections */
     .user-form-section p{
-        width: 90vw;  
+        width: 95%;  
     }
     .user-form-section label{
-        width: 90vw;  
+        width: 95%;  
     }
     .user-form-inputs{
-        width: 90vw;
+        width: 95%;
     }
     .user-form-inputs input{
-        width: 90vw;
+        width: 95%;
     }
     .user-form-submit input{
-        width: 90vw;
+        width: 95%;
     }
 
     /* Full Tale Section*/
     .fulltale-views-likes{
-        width: 90vw;
+        width: 95%;
     }
     .fulltale-content{
-        width: 90vw;
+        width: 95%;
     }
 
     /* New Tale and Edit Tale Sections */
     .newtale-link a{   
-        width: 90vw;
+        width: 95%;
     }    
     .tale-form-inputs input{
-        width: 90vw;
+        width: 95%;
     }
     .tale-form-inputs select{
-        width: 90vw;
+        width: 95%;
     }
     .tale-form-submit input{
-        width: 90vw;
+        width: 95%;
     }
     .tale-blurb{
-        width: 90vw;
+        width: 95%;
     }
     .tale-content{
-        width: 90vw;
+        width: 95%;
     }
     .edittale-form-section p{
-        width: 90vw;  
+        width: 95%;  
     }
     .delete{
-        width: 90vw;
+        width: 95%;
     }
 }

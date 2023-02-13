@@ -325,6 +325,7 @@ The website consists of nine pages with ten features.
 <details><summary>Responsive Design</summary>
 <img src="mini_tales/static/images/readme/structure/error_page.JPG">
 </details>
+
 - The website is full responsive on desktop to mobile devices.
 - Meets user story: 11.
 

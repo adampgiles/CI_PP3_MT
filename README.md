@@ -396,6 +396,71 @@ The website was tested on the following browsers:
 | Elements overflow page when zooming in/out                                                      | Changed instances of vw to %                                                                                                             |
 | Horizontal scroll showing on login and register pages                                           | Fixed container widths for desktop and mobile                                                                                            |
 
+## Deployment
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner.
+
+### Making a Local Clone
+1. Navigate to the GitHub repository 
+2. Select the Code button above the files.
+3. Select the "HTTPS" tab on the dropdown window to clone with HTTPS, copy the link.
+4. Open Git Bash.
+5. Change the current working directory to the location where you would like the cloned directory.
+6. Type "git clone " and paste the URL from the clipboard (example: "$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY")
+7. Press Enter to create.
+8. Create an env.py file in the root folder in the project, and add the following code with the relevant key, value pairs, and ensure you enter the correct key values.
+
+<code>import os</code><br>
+<code>os.environ.setdefault("IP", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("PORT", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("SECRET_KEY", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("MONGO_URI", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("MONGO_DBNAME", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("AWS_ACCESS_KEY_ID", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("AWS_SECRET_ACCESS_KEY", TO BE ADDED BY USER)</code>
+
+9. Install the relevant packages as per the requirements.txt file
+10. Start the application by running <code>python3 app.py</code>
+
+### MongoDB Database
+Mongodb is the database used in the application
+1. Create a [MongoDB](https://account.mongodb.com/account/register) account.
+2. Create a New Cluster.
+3. Click the Cluster, navigate to Collections, choose "Create Database".
+4. Name the database "short_stories" and the first collection "users".
+5. Create another collection called "tales".
+6. Add the fields to each collection based on the image below 
+<details><summary>Physical Database Model Image</summary>
+<img src="mini_tales/static/images/readme/database/physical_design_model.png">
+</details> 
+4. Click Database Access, create a user and allow the user read/write access. Make a note of the username.
+5. Click Network Access, add the ip-address of the application connecting to the database.
+6. Click Database, click Connect, and click connect your application.
+7. Make a note of the MONGO_URI, MONGO_DBNAME and username, these are used when deploying locally and deploying on heroku.
+
+### Heroku
+1. In the app.py file, ensure that debug is set to False.
+2. Create a new file called "ProcFile" in the root directory, and add the line; 
+
+<code>web: python app.py</code>
+
+3. Create a requirements.txt file by running the below command in the terminal.
+
+<code>pip freeze > requirements.txt</code>
+
+5. Ensure ProcFile and requirements.txt are committed to your git repository in the root directory.
+
+6. Create an account on [Heroku](https://signup.heroku.com/login?redirect-url=https%3A%2F%2Fid.heroku.com%2Foauth%2Fauthorize%3Fclient_id%3Ddd0b2de7-576f-44d7-8607-788ece271310%26redirect_uri%3Dhttps%253A%252F%252Fwww.heroku.com%252Fauth%252Fheroku%252Fcallback%26response_type%3Dcode%26scope%3Didentity%2Bread%26state%3Dcbeff6caa22dd3da82260d4764c9ad34d99bca10abeb5adb)
+7. Create a new application with a unique name.
+8. In Application Dashboard, navigate to the deploy section and connect to your Git account and then to your Repository.
+9. Select the branch for master or main and enable automatic deploys.
+10. Set the config variables in the Settings section.
+11. Set key/value pairs for the following keys: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
+12. Navigate to the dashboard and trigger the deployment.
+13. When the deployment has been successful, click on "Open App".
+
 ## Credits
 
 ### Images/Icons

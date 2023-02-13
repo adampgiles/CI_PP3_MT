@@ -74,7 +74,7 @@ User stories have been separated into two groups; Site Users and Site Owner.
 ### Colour
 The site's colour scheme consists of four key colours; White, black, yellow and red. White is used for input fields and text background. Black is used for text, icons and borders. Yellow is for buttons, links and key information. Red is used for delete buttons and alert messages.
 <details><summary>Key Colours</summary>
-<img src="mini_tales/static/images/readme/colour_scheme.JPG">
+<img src="mini_tales/static/images/readme/structure/colour_scheme.JPG">
 </details>
 
 ### Font

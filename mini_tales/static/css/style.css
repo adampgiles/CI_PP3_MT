@@ -233,11 +233,21 @@ h2{
 .tale-title{
     font-weight: 700;
     width: 100%;
+    margin: 2px;
 }
 .tale-title a{
     text-decoration: underline;
+    padding: 5px 10px 5px 10px;
     color: var(--base-text);
-}
+    background: var(--button-bg);    
+    border: 2px solid var(--base-text); 
+    border-radius: 5px;      
+    box-shadow: 0 2px var(--box-shadows);
+}   
+.tale-title a:hover{
+    background: var(--off-white);    
+    border-color: var(--button-bg); 
+}    
 .tale-publish-date{
     font-style: italic;
     font-size: x-small;

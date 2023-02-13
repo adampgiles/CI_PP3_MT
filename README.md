@@ -24,6 +24,12 @@
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
     - [JS Validation](#js-validation)
+- [Testing](#testing)
+    - [Accessibility](#accessibility)
+    - [Performance](#performance)
+    - [Device Testing](#device-testing)
+    - [Browser Compatibility](#browser-compatibility)
+    - [User Story Testing](#user-story-testing)
 
 ## Project Goals
 Mini Tales is a short story sharing website. Users can create an account to share, read, search for and upvote short stories.

@@ -1,5 +1,5 @@
 import os
-from flask import (Flask)
+from flask import (Flask, render_template)
 from flask_pymongo import PyMongo
 
 if os.path.exists("env.py"):
@@ -13,6 +13,9 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 mongo.init_app(app)
 
+def page_not_found(e):
+  return render_template('404.html'), 404
+
 def create_app():
     """
     Creates an app with the authentication and tales blueprint routes
@@ -23,5 +26,7 @@ def create_app():
     # Register the routes with the app
     app.register_blueprint(authentication)
     app.register_blueprint(tales)
+    # Register 404 error page
+    app.register_error_handler(404, page_not_found)
     # Return the app
     return app

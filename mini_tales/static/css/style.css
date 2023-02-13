@@ -182,6 +182,10 @@ h2{
     padding: 7.5px 15px 7.5px 15px;
     margin: 10px;
 }
+.search-clear-submit button:hover{
+    background-color: var(--off-white);
+    border-color: var(--button-bg);
+}
 
 /* Explore Tales - Tale Section*/
 .tale-list-section{
@@ -342,6 +346,10 @@ h2{
     background-color: var(--button-bg);
     box-shadow: 0 2px var(--box-shadows);
 }
+.edit-delete:hover{
+    background-color: var(--off-white);
+    border-color: var(--button-bg);
+}
 .fulltale-publish-date{
     float: right;
     font-size: 75%;
@@ -409,6 +417,10 @@ h2{
     border-radius: 5px;  
     background-color: var(--button-bg);
 }
+.newtale-link a:hover{
+    background-color: var(--off-white);
+    border-color: var(--button-bg);
+}
 .newtale-form-section{
     display: flex;    
     flex-direction: column;
@@ -458,6 +470,10 @@ h2{
     margin: 10px;
     box-shadow: 0 2px var(--box-shadows);
 }
+.tale-form-submit input:hover{
+    background-color: var(--off-white);
+    border-color: var(--button-bg);
+}
 .tale-blurb{
     border: 2px solid var(--base-border);
     border-radius: 10px;
@@ -497,7 +513,7 @@ h2{
     font-weight: 700;
 }
 .delete{
-    color: var(--off-white);
+    color: var(--base-text);
     font-weight: 700;
     width: 50vw;
     text-decoration: none;
@@ -507,6 +523,10 @@ h2{
     border-radius: 5px;  
     background-color: var(--flashes);
     box-shadow: 0 2px var(--box-shadows);
+}
+.delete:hover{
+    background-color: var(--off-white);
+    border-color: var(--flashes);
 }
 
 /* Delete Tale Section*/
@@ -538,6 +558,10 @@ h2{
 .delete-cancel{
     background-color: var(--button-bg);      
 }
+.delete-cancel:hover{
+    background-color: var(--off-white);
+    border-color: var(--button-bg);
+}
 .delete-cancel a{
     color: var(--base-text);    
 }
@@ -545,7 +569,11 @@ h2{
     background-color: var(--flashes);
 }
 .delete-confirm a{
-    color: var(--off-white);    
+    color: var(--base-text);    
+}
+.delete-confirm:hover{
+    background-color: var(--off-white);
+    border-color: var(--flashes);
 }
 
 /* Login Section*/
@@ -573,6 +601,9 @@ h2{
 .register-link a{
     color: var(--button-bg);
 }
+.register-link a:hover{
+    color: var(--off-white);
+}
 .user-form-inputs{
     margin: 20px;
     width: 60vw;
@@ -595,6 +626,10 @@ h2{
     width: 60vw;
     margin: 20px;
     box-shadow: 0 2px var(--box-shadows);
+}
+.user-form-submit input:hover{
+    background-color: var(--off-white);
+    border-color: var(--button-bg);
 }
 
 /* Register Section*/
@@ -639,6 +674,10 @@ h2{
     width: 80vw;
     margin: 20px;
     box-shadow: 0 2px var(--box-shadows);
+}
+.register-form-submit input{
+    background-color: var(--off-white);
+    border-color: var(--button-bg);
 }
 
 /* Footer*/

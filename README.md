@@ -10,6 +10,10 @@
 - [User Experience](#user-experience)
     - [Target Audience](#target-audience)
     - [User Stories](#user-stories)
+- [Design](#design)
+    - [Colour](#colour)
+    - [Fonts](#font)
+    - [Structure](#structure)
 
 ## Project Goals
 Mini Tales is a short story sharing website. Users can create an account to share, read, search for and upvote short stories.
@@ -47,3 +51,70 @@ User stories have been separated into two groups; Site Users and Site Owner.
 9. I would like users to be able to "Log out" of the website.
 10. I would like the user to be able to search and filter for other user's short stories using keywords.
 11. I would like the website to be responsive, so I can be accessed via mobile, tablet and desktop.
+
+## Design
+
+### Colour
+The site's colour scheme consists of four key colours; White, black, yellow and red. White is used for input fields and text background. Black is used for text, icons and borders. Yellow is for buttons, links and key information. Red is used for delete buttons and alert messages.
+<details><summary>Key Colours</summary>
+</details>
+
+### Font
+
+One font was used on the site; Quicksand, which is a clear and legible font.
+
+### Structure
+
+The website structure consists of the main "Base" page, with the following sections being added to this page dependant on the URL; an "Explore Tales" page, a Log in page, a Register page, a Tale page, a My Tales page, a New Tale page, an Edit Tale page, a Delete Tale page and 404 page.
+
+The pages are detailed below;
+
+<details><summary>Base Page</summary>
+<img src="">
+</details>
+- This page contains a header; consisting of Site Logo and Navigation Bar (Links change if the user is logged in). Also a footer; consisting of a credits link, disclaimer and copyright notice. 
+
+<details><summary>Explore Tales Page</summary>
+<img src="">
+</details>
+- This page contains a search bar and a block for each submitted tales. Each block shows all the tales details, except for the tale story. Users can also click the like link when logged in, to like/unlike a tale. A clear search button displays if a search is conducted.
+
+<details><summary>Log in Page</summary>
+<img src="">
+</details>
+- This page contains a form for the user to complete that will log them into the site.
+
+<details><summary>Register Page</summary>
+<img src="">
+</details>
+- This page contains a form for the user to complete that will create an account and log them into the site.
+
+<details><summary>Tale Page</summary>
+<img src="">
+</details>
+- This page displays all the content of a tale for a user to read. If the user is logged in and this tale is theirs, a button to edit/delete the tale is displayed.
+
+<details><summary>My Tales Page</summary>
+<img src="">
+</details>
+- This page displays all the currently logged in user's tales. A button to edit/delete the tale is displayed on each tales. Also a button is displayed for the user to submit a new tale.
+
+<details><summary>New Tale Page</summary>
+<img src="">
+</details>
+- This page contains a form for the user to complete that will submit a tale to the site.
+
+<details><summary>Edit Tale Page</summary>
+<img src="">
+</details>
+- This page contains a form for the user to complete that will allow them to edit an existing submitted tale. Also a button is displayed for the user to delete the tale.
+
+<details><summary>Delete Tale Page</summary>
+<img src="">
+</details>
+- This page contains buttons for the user to confirm or cancel a deletion request.
+
+<details><summary>404 Page</summary>
+<img src="">
+</details>
+- A 404 page was created to ensure that a user can easily navigate back to the main site if they encounter a page which does not exist.

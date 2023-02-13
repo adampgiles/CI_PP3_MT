@@ -15,6 +15,7 @@
     - [Fonts](#font)
     - [Structure](#structure)
     - [Code Structure](#Code-Structure)
+    - [Database](#Database)
 - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks, Libraries & Tools](#frameworks-libraries--tools)
@@ -137,6 +138,63 @@ The pages are detailed below;
     - templates: This folder contains two folders for; the authentication HTML pages and the tales HTML pages. Also the base.html and 404.html files are stored in the templates folder.
     - app.py: This file creates and runs the website application.
     - env.py: This file is used to ensure passwords and security-sensitive information are stored securely in environment variables. This file is added to .gitignore, this file is never committed to the repository.
+
+### Database
+- The website is a data-centric website;
+- The front-end utilises HTML, Javascript and CSS .
+- The backend utilises Python, Flask and Jinja Templates connected with a mongodb document-oriented database.
+
+#### Conceptual Database Model
+<details><summary>Conceptual Database Model Image</summary>
+<img src="mini_tales/static/images/readme/conceptual_design_model.png">
+</details>
+
+- To aid with planning the database creation, I started by create a Conceptual Database Model.
+
+#### Physical Database Model
+<details><summary>Physical Database Model Image</summary>
+<img src="mini_tales/static/images/readme/physical_design_model.png">
+</details>
+
+- After completing the Conceptual Database Model, I created a Physical Database Model. This model reflects the structure of the database on MongoDB.
+
+#### MongoDB Database
+<details><summary>Mongo Database Image</summary>
+<img src="mini_tales/static/images/readme/mongo_database.JPG">
+</details>
+
+- One database called "short_stories" was created to store two collections; 
+    - users: This collection stores the user's data.
+    - tales: This collection stores each tales's data.
+
+#### Users Collection
+<details><summary>Users Collection Image</summary>
+<img src="mini_tales/static/images/readme/mongo_users_collection.JPG">
+</details>
+
+- When a user creates a new account, a document is created and stored in this collection.
+- This collection contains fields for;
+    - _id (ObjectId): This is a unique ID that is populated when the document is created.
+    - username (String): This is stored in lowercase.
+    - password (String): The password is stored encrypted using a generate_password_hash from the werkzeug.security Python library.
+    - liked_tales (Array): This stores the Object_IDs of tales the user has "Liked".
+
+#### Tales Collection
+<details><summary>Tales Collection Image</summary>
+<img src="mini_tales/static/images/readme/mongo_tales_collection.JPG">
+</details>
+
+- When a user submits a new tale, a document is created and the data is stored in this collection.
+- This collection contains fields for;
+    - _id (ObjectId): This is a unique ID that is populated when the document is created.
+    - tale_title (String): This is the tale's title.
+    - tale_blurb (String): This is the tale's blurb.
+    - tale_topic (String): This is the tale's topic.
+    - tale_content (String): This is the tale's story.
+    - tale_likes (Int32): This is the amount of "Likes" the tale has received.
+    - tale_views (Int32): This is the amount of Views the tale has received.
+    - tale_publish_date (String): This is the date the tale was submitted.
+    - tale_author (String): This is the username of the user who submitted the tale.
 
 ## Technologies Used
 

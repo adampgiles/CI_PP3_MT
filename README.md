@@ -280,3 +280,25 @@ The website consists of nine pages with ten features.
 - A button to "No, Go Back!", when clicked returns the user to the Edit Tale page
 - Meets user story: 4.
 
+### Login Page
+- This page contains a form for the user to log in to the website.
+- There are two input fields; username and password. Also a button to "Log in"
+- Above the input fields, there is text("New Here?") and a link ("Register and Account") to the Register page.
+- The form validation is conducted on the authentication/route.py, which checks the user database collection for a username and password match.
+- A flashes message appears at the top of this section if validation fails.
+- Meets user story: 8.
+
+### Register Page
+- This page contains a form for the user to create an account on the website.
+- There are three input fields; username, password and confirm password. Also a button to "Create and Account"
+- Above the input fields, there is text("Register below to share your Tales with other Mini Tales users").
+- Validation is conducted on both the authentication/route.py and the validation.js script.
+- The validation.js validation checks if the input field entries meet their corresponding Regular Expression, also that the both password fields match. The form will not submit if this validation fails.
+- When the above validation completes, the authentication/route.py validation checks the users database collection to make sure the username does not already exists.
+- A flashes message appears at the top of this section if authentication/route.py validation fails.
+- A validation alert message appears at the top of this section if validation.js validation fails.
+- Meets user story: 1, 7.
+
+### 404 Page
+- This page is display when a user encounters a page that does not exist (HTTP 404 response code).
+- The user is provided with a link to return to the Explore Tales page.

@@ -480,6 +480,9 @@ Mongodb is the database used in the application
 
 ## Credits
 
+### Placeholder/Test Tales
+- Tale Titles, Blurbs and Main Tale for all "testuser1" and "testuser2" tales, were generated using [ChatGPT](https://chat.openai.com/auth/login).
+
 ### Images/Icons/Font
 - Font from [Google-Fonts](https://fonts.google.com/)
 - All website Icons taken from [FontAwesome](https://fontawesome.com/).

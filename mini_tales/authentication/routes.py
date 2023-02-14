@@ -16,17 +16,17 @@ def register():
     """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+            {"username": request.form.get("register-username").lower()})
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("authentication.register"))
         register = {
-            "username" : request.form.get("username").lower(),
-            "password" : generate_password_hash(request.form.get("password")),
+            "username" : request.form.get("register-username").lower(),
+            "password" : generate_password_hash(request.form.get("register-password")),
             "liked_tales": []
         }
         mongo.db.users.insert_one(register)
-        session["user"] = request.form.get("username").lower()
+        session["user"] = request.form.get("register-username").lower()
         flash("Account Successfully Created!")
         session["logged_in"] = True
         return redirect(url_for("tales.mytales", username = session["user"])) 
@@ -47,6 +47,7 @@ def login():
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     session["logged_in"] = True
+                    flash("Logged in Successfully!")
                     return redirect(url_for("tales.mytales", username = session["user"]))
             else:
                 flash("Incorrect Username and/or Password")

@@ -31,6 +31,10 @@
     - [Device Testing](#device-testing)
     - [Browser Compatibility](#browser-compatibility)
     - [User Story Testing](#user-story-testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
 
 ## Project Goals
 Mini Tales is a short story sharing website. Users can create an account to share, read, search for and upvote short stories.
@@ -393,6 +397,131 @@ The following resolutions were tested using a Windows desktop PC;
 The website was tested on the following browsers:
 - Google Chrome
 - Mozilla Firefox
+
+### User Story Testing
+
+1. I would like to create an account to share my short stories with other users.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Register Page                        | Complete and submit the Register Form to create an account                                | An account is created                                      | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_1/register_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_1/register_2.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_1/register_3.png">
+</details>
+
+2. I would like to submit a short story to the website.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| New Tale Page                        | Complete and submit the New Tale Form to submit a tale                                   | The tale is added to the website                           | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_2/newtale_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_2/newtale_2.png">
+</details>
+
+3. I would like to edit my short story submission.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Edit Tale Page                       | Make amendments and submit the Edit Tale Form to edit a tale                             | The tale is update on the website                          | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_3/edittale_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_3/edittale_2.png">
+</details>
+
+4. I would like to delete my short story submission.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Delete Tale Page                     | Click Delete Tale button to delete the tale                                              | The tale is deleted from the website                        | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_4/deletetale_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_4/deletetale_2.png">
+</details>
+
+5. I would like to search and filter for other user's short stories.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Search Bar                           | Conduct a keyword search to only show tales that contain the keyword                     | Only tales that contain the keyword are shown              | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_5/search_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_5/search_2.png">
+</details>
+
+6. I would like to upvote short stories that I enjoy.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Like Count Button                    | Click a tale's like count to like the tale, increasing the count by 1                    | Tale is "liked" and count increases by 1                   | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_6/like_tale_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_6/like_tale_2.png">
+</details>
+
+7. I would like users to have the ability to create a unique account on the website.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Register Page                        | Complete and submit the Register Form to create an account                                | An account is created                                      | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_7/register_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_7/register_2.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_7/register_3.png">
+</details>
+
+8. I would like users to be able to "Log in" to the website.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Login Page                           | Complete and submit the Login Form to log into an account                                | User is logged into the website                            | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_8/login_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_8/login_2.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_8/login_3.png">
+</details>
+
+9. I would like users to be able to "Log out" of the website.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Logout Link                          | Click the Logout link to log out of the website                                          | User is logged out of the website                          | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_9/logout_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_9/logout_2.png">
+</details>
+
+10. I would like the user to be able to search and filter for other user's short stories using keywords.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Search Bar                           | Conduct a keyword search to only show tales that contain the keyword                     | Only tales that contain the keyword are shown              | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_10/search_1.png">
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_10/search_2.png">
+</details>
+
+11. I would like the website to be responsive, so I can be accessed via mobile, tablet and desktop.
+
+| **Feature**                          | **Action Required**                                                                      | **Expected Outcome**                                       | **Actual Outcome**|
+| ------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------- |
+| Website                              | View website on different device sizes                                                   | Website is responsive on mobile,tablet and desktop         | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_11/website_responsive.JPG">
+</details>
 
 ## Bugs
 

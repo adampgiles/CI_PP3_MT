@@ -46,7 +46,7 @@ def clear_search():
     """  
     session["search"] = ""
     tales = mongo.db.tales.find()
-    return render_template("tales/tales.html", tales = tales)
+    return redirect(url_for("tales.get_tales", tales = tales))
 
 @tales.route("/mytales/<username>", methods = ["GET","POST"])
 def mytales(username):

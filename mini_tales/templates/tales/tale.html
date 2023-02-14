@@ -38,3 +38,10 @@
     </div> 
 </div>
 {% endblock %}
+
+{% block script %}
+{% if session["logged_in"] %}
+<!-- Page Script Link -->
+<script src="{{ url_for('static', filename='js/page.js') }}" defer></script> 
+{% endif %} 
+{% endblock %}

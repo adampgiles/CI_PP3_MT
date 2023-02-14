@@ -32,8 +32,10 @@
             <input type="submit" id="register-submit" name="register-submit" value="Create an Account"><br>
         </div>
     </form>  
-</div>    
+</div>       
+{% endblock %}
 
+{% block script %}
 <!-- Validation Script Link -->
-<script src="{{ url_for('static', filename='js/validation.js') }}" defer></script>    
+<script src="{{ url_for('static', filename='js/validation.js') }}" defer></script>  
 {% endblock %}

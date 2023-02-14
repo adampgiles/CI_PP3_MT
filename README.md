@@ -1,5 +1,7 @@
 # Mini Tales (Short Story Sharing)
 
+<img src="mini_tales/static/images/readme/user_story_testing/user_story_11/website_responsive.JPG">
+
 **Developer: Adam Giles**
 
 [Live website](https://mini-tales-project.herokuapp.com/)

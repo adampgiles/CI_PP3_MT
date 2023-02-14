@@ -16,7 +16,7 @@
     <label for="title">Tale Title</label><br>
     <div class="tale-form-inputs">
         <input type="text" id="title" name="title"
-        minlength="3" maxlength="30" value="{{ tale.tale_title }}" required><br>
+        minlength="3" maxlength="25" value="{{ tale.tale_title }}" required><br>
     </div>
 
     <!-- Topic -->
@@ -65,13 +65,13 @@
     <!-- Blurb -->
     <label for="blurb">Tale Blurb</label><br>
     <div class="tale-form-inputs">
-        <textarea id="tale-blurb"  class="tale-blurb" name="tale-blurb" cols="30" rows="10" maxlength="400" required>{{ tale.tale_blurb }}</textarea>
+        <textarea id="tale-blurb"  class="tale-blurb" name="tale-blurb" cols="30" rows="10" maxlength="375" required>{{ tale.tale_blurb }}</textarea>
     </div>
 
     <!-- Tale Content -->
     <label for="tale-content">Your Tale</label><br>
     <div class="edittale-form-inputs">
-        <textarea id="tale-content"  class="tale-content" name="tale-content" cols="30" rows="10">{{ tale.tale_content }}</textarea>
+        <textarea id="tale-content"  class="tale-content" name="tale-content" cols="30" rows="10" maxlength="35000">{{ tale.tale_content }}</textarea>
     </div>    
 
     <div class="tale-form-submit">

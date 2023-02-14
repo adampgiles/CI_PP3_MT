@@ -278,6 +278,7 @@ h2{
     border-radius: 2px;
     padding: 8px;
     margin: 2px;
+    word-break: break-all;
 }
 
 .tale-block-bottom{

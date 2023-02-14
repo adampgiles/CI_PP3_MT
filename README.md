@@ -611,6 +611,9 @@ Mongodb is the database used in the application
 
 ## Credits
 
+## Code
+- page.js code obtained from StackOverflow user [Ben](https://stackoverflow.com/questions/17642872/refresh-page-and-keep-scroll-position#answer-62881829)
+
 ### Placeholder/Test Tales
 - Tale Titles, Blurbs and Main Tale for all "testuser1" and "testuser2" tales, were generated using [ChatGPT](https://chat.openai.com/auth/login).
 

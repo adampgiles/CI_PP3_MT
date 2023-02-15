@@ -646,17 +646,57 @@ The website was tested on the following browsers:
 Mongodb is the database used in the application
 1. Create a [MongoDB](https://account.mongodb.com/account/register) account.
 2. Create a New Cluster.
-3. Click the Cluster, navigate to Collections, choose "Create Database".
-4. Name the database "short_stories" and the first collection "users".
-5. Create another collection called "tales".
-6. Add the fields to each collection based on the image below 
-<details><summary>Physical Database Model Image</summary>
-<img src="mini_tales/static/images/readme/database/physical_design_model.png">
-</details> 
-4. Click Database Access, create a user and allow the user read/write access. Make a note of the username.
-5. Click Network Access, add the ip-address of the application connecting to the database.
-6. Click Database, click Connect, and click connect your application.
-7. Make a note of the MONGO_URI, MONGO_DBNAME and username, these are used when deploying locally and deploying on heroku.
+3. Select "Shared", for "Cloud Provider & Region" select "AWS" and your closed location.
+<img src="mini_tales/static/images/readme/deployment/mongodb/cluster_provider_region.JPG">
+
+4. Leave "Cluster Tier" on "M0 Sandbox".
+<img src="mini_tales/static/images/readme/deployment/mongodb/cluster_tier.JPG">
+
+5. Leave "Additional Settings" on "MongoDB 5.0, No Backup"
+<img src="mini_tales/static/images/readme/deployment/mongodb/cluster_backup.JPG">
+
+6. Set "Cluster Name" to the name you would like (One time only: once your cluster is created, you won't be able to change its name.)
+<img src="mini_tales/static/images/readme/deployment/mongodb/cluster_name.JPG">
+
+7. Select "Create Cluster"
+<img src="mini_tales/static/images/readme/deployment/mongodb/cluster_create.JPG">
+
+7. Click the Cluster Name, navigate to Collections.
+<img src="mini_tales/static/images/readme/deployment/mongodb/cluster_overview.JPG">
+<img src="mini_tales/static/images/readme/deployment/mongodb/collections.JPG">
+
+8. Select "Create Database".
+<img src="mini_tales/static/images/readme/deployment/mongodb/create_database.JPG">
+
+9. Name the database "short_stories" and the first collection "users".
+<img src="mini_tales/static/images/readme/deployment/mongodb/new_database.JPG">
+
+10. Create another collection called "tales", by clicking the "+" icon next to "short_stories".
+<img src="mini_tales/static/images/readme/deployment/mongodb/new_collection.JPG">
+<img src="mini_tales/static/images/readme/deployment/mongodb/tales_collection.JPG">
+
+11. Click Database Access.
+<img src="mini_tales/static/images/readme/deployment/mongodb/database_access.JPG">
+
+12. Create a new user, set a username (Make a note of the username) and password.
+<img src="mini_tales/static/images/readme/deployment/mongodb/new_user.JPG">
+
+13. Set the "Database User Privileges" - "Built-in Role" to "Read and write to any database".
+<img src="mini_tales/static/images/readme/deployment/mongodb/user_role.JPG">
+
+14. Select "Add User".
+<img src="mini_tales/static/images/readme/deployment/mongodb/add_user.JPG">
+
+15. Select "Network Access", select "Add IP Address", add the IP Address of the application connecting to the database and select "Confirm".
+<img src="mini_tales/static/images/readme/deployment/mongodb/network_access.JPG">
+
+16. Click Database, click Connect, and click connect your application.
+<img src="mini_tales/static/images/readme/deployment/mongodb/database.JPG">
+<img src="mini_tales/static/images/readme/deployment/mongodb/database_connect.JPG">
+<img src="mini_tales/static/images/readme/deployment/mongodb/connect_app.JPG">
+
+17. Select your "Driver and "Version". copy the code to your env.py file after '"MONGO_URI":' (Replace the "password" with the password for the user and add "short_stories after "mongobd.net/"). Click Close.
+<img src="mini_tales/static/images/readme/deployment/mongodb/connect_details.JPG">
 
 ### Heroku
 1. In the app.py file, ensure that debug is set to False.

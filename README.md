@@ -408,10 +408,34 @@ Code Institute CI Python Linter was utilised to validate the websites Python. Al
 
 ### Accessibility
 
-WAVE WebAIM web accessibility evaluation tool was utilised to ensure the website met accessibility standards, passed with 0 errors.
+WAVE WebAIM web accessibility evaluation tool was utilised to ensure the website met accessibility standards. I was able to test tales.html, tale.html, login.html and register.html, all with 0 errors. The other pages were not able to be accessed by WAVE WebAIM so I used Google Chrome Lighthouse to check the remaining pages, all received 100% pass.
 
-<details><summary>Accessibility Test Result</summary>
-<img src="mini_tales/static/images/readme/validation/accessibility_validation.JPG">
+<details><summary>Main Page</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/base_validation.JPG">
+</details>
+<details><summary>Tales</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/tales_validation.JPG">
+</details>
+<details><summary>Tale</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/tale_validation.JPG">
+</details>
+<details><summary>Login</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/login_validation.JPG">
+</details>
+<details><summary>Register</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/register_validation.JPG">
+</details>
+<details><summary>My Tales</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/mytales_validation.JPG">
+</details>
+<details><summary>New Tale</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/newtale_validation.JPG">
+</details>
+<details><summary>Edit Tale</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/edittale_validation.JPG">
+</details>
+<details><summary>Delete Tale</summary>
+<img src="mini_tales/static/images/readme/validation/accessibility/deletetale_validation.JPG">
 </details>
 
 ### Performance

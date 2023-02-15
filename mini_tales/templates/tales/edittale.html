@@ -22,8 +22,8 @@
     <!-- Topic -->
     <label for="topic">Tale Topic</label><br>
     <div class="tale-form-inputs">
-        <select name="topic" id="topic" value="{{ tale.tale_topic }}">
-            <option value="{{ tale.tale_topic }}">{{ tale.tale_topic }}</option>
+        <select name="topic" id="topic">
+            <option value="{{ tale.tale_topic }}">{{ tale.tale_topic }}</option>            
             {% if tale.tale_topic != "Adventure" %}
                 <option value="Adventure">Adventure</option>
             {% endif %}
@@ -63,7 +63,7 @@
     </div>
 
     <!-- Blurb -->
-    <label for="blurb">Tale Blurb</label><br>
+    <label for="tale-blurb">Tale Blurb</label><br>
     <div class="tale-form-inputs">
         <textarea id="tale-blurb"  class="tale-blurb" name="tale-blurb" cols="30" rows="10" maxlength="375" required>{{ tale.tale_blurb }}</textarea>
     </div>

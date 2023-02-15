@@ -329,7 +329,7 @@ The website consists of nine pages with ten features.
 
 ### Responsive Design
 <details><summary>Responsive Design</summary>
-<img src="mini_tales/static/images/readme/structure/error_page.JPG">
+<img src="mini_tales/static/images/readme/structure/website_responsive.JPG">
 </details>
 
 - The website is full responsive on desktop to mobile devices.

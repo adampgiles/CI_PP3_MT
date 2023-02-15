@@ -13,8 +13,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 mongo.init_app(app)
 
+
 def page_not_found(e):
-  return render_template('404.html'), 404
+    return render_template('404.html'), 404
+
 
 def create_app():
     """

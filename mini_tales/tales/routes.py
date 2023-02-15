@@ -80,7 +80,7 @@ def newtale():
     My Tales page, once submitted.
     """
     date = datetime.now()
-    if request.method is "POST":
+    if request.method == "POST":
         usertale = {
             "tale_title": request.form.get("title"),
             "tale_blurb": request.form.get("tale-blurb"),
@@ -110,7 +110,7 @@ def edittale(_id):
     date = datetime.now()
     _id = _id
     tale = mongo.db.tales.find_one({"_id": ObjectId(_id)})
-    if request.method is "POST":
+    if request.method == "POST":
         mongo.db.tales.update_one(
             {"_id": ObjectId(_id)},
             {"$set": {

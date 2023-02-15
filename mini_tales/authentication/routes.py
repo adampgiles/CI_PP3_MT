@@ -20,7 +20,7 @@ def register():
     input fields do not match. The user's password
     is encrypted before storing in the users collection.
     """
-    if request.method is "POST":
+    if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("register-username").lower()})
         if existing_user:
@@ -51,7 +51,7 @@ def login():
     user is taken to their My Tales page and a
     login session is created.
     """
-    if request.method is "POST":
+    if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
         if existing_user:

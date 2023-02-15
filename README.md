@@ -382,7 +382,10 @@ W3C Jigsaw CSS Validation Service was utilised to validate the website's CSS. Wh
 
 JSHint was utilised to validate the website's JS. 0 errors are found. 
 <details><summary>validation.js</summary>
-<img src="mini_tales/static/images/readme/validation/css_validation.JPG">
+<img src="mini_tales/static/images/readme/validation/js/validation_js_validation.JPG">
+</details>
+<details><summary>page.js</summary>
+<img src="mini_tales/static/images/readme/validation/js/page_js_validation.JPG">
 </details>
 
 ## Python Validation

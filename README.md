@@ -339,9 +339,36 @@ The website consists of nine pages with ten features.
 
 ### HTML Validation
 
-W3C Markup Validation Service was utilised to validate the HTML of the website. The website's pages passes with no errors.
-<details><summary>Website</summary>
-<img src="mini_tales/static/images/readme/validation/html_validation.JPG">
+W3C Markup Validation Service was utilised to validate the HTML of the website. The website's pages pass with no errors.
+<details><summary>Main Page</summary>
+<img src="mini_tales/static/images/readme/validation/html/base_validation.JPG">
+</details>
+<details><summary>Tales</summary>
+<img src="mini_tales/static/images/readme/validation/html/tales_validation.JPG">
+</details>
+<details><summary>Tale</summary>
+<img src="mini_tales/static/images/readme/validation/html/tale_validation.JPG">
+</details>
+<details><summary>Login</summary>
+<img src="mini_tales/static/images/readme/validation/html/login_validation.JPG">
+</details>
+<details><summary>Register</summary>
+<img src="mini_tales/static/images/readme/validation/html/register_validation.JPG">
+</details>
+<details><summary>My Tales</summary>
+<img src="mini_tales/static/images/readme/validation/html/mytales_validation.JPG">
+</details>
+<details><summary>New Tale</summary>
+<img src="mini_tales/static/images/readme/validation/html/newtale_validation.JPG">
+</details>
+<details><summary>Edit Tale</summary>
+<img src="mini_tales/static/images/readme/validation/html/edittale_validation.JPG">
+</details>
+<details><summary>Delete Tale</summary>
+<img src="mini_tales/static/images/readme/validation/html/deletetale_validation.JPG">
+</details>
+<details><summary>404 Error</summary>
+<img src="mini_tales/static/images/readme/validation/html/error_validation.JPG">
 </details>
 
 ### CSS Validation

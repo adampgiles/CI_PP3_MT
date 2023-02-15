@@ -358,6 +358,22 @@ JSHint was utilised to validate the website's JS. 0 errors are found.
 <img src="mini_tales/static/images/readme/validation/css_validation.JPG">
 </details>
 
+## Python Validation
+
+Code Institute CI Python Linter was utilised to validate the websites Python. All clear, no errors found
+<details><summary>app.py</summary>
+<img src="mini_tales/static/images/readme/validation/app_validation.JPG">
+</details>
+<details><summary>__init__.py</summary>
+<img src="mini_tales/static/images/readme/validation/init_validation.JPG">
+</details>
+<details><summary>tales/routes.py</summary>
+<img src="mini_tales/static/images/readme/validation/tales_routes_validation.JPG">
+</details>
+<details><summary>authentication/routes.py</summary>
+<img src="mini_tales/static/images/readme/validation/authentication_routes_validation.JPG">
+</details>
+
 ## Testing
 
 ### Accessibility

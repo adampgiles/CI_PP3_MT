@@ -629,15 +629,14 @@ The website was tested on the following browsers:
 6. Type "git clone " and paste the URL from the clipboard (example: "$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY")
 7. Press Enter to create.
 8. Create an env.py file in the root folder in the project, and add the following code with the relevant key, value pairs, and ensure you enter the correct key values.
+(You can use [RandomKeygen](https://randomkeygen.com/) to generate a "Fort Knox" password for the "SECRET_KEY" field)
 
 <code>import os</code><br>
-<code>os.environ.setdefault("IP", TO BE ADDED BY USER)</code><br>
-<code>os.environ.setdefault("PORT", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("IP", 0.0.0.0)</code><br>
+<code>os.environ.setdefault("PORT", 5000)</code><br>
 <code>os.environ.setdefault("SECRET_KEY", TO BE ADDED BY USER)</code><br>
 <code>os.environ.setdefault("MONGO_URI", TO BE ADDED BY USER)</code><br>
 <code>os.environ.setdefault("MONGO_DBNAME", TO BE ADDED BY USER)</code><br>
-<code>os.environ.setdefault("AWS_ACCESS_KEY_ID", TO BE ADDED BY USER)</code><br>
-<code>os.environ.setdefault("AWS_SECRET_ACCESS_KEY", TO BE ADDED BY USER)</code>
 
 9. Install the relevant packages as per the requirements.txt file
 10. Start the application by running <code>python3 app.py</code>
@@ -711,13 +710,27 @@ Mongodb is the database used in the application
 5. Ensure ProcFile and requirements.txt are committed to your git repository in the root directory.
 
 6. Create an account on [Heroku](https://signup.heroku.com/login?redirect-url=https%3A%2F%2Fid.heroku.com%2Foauth%2Fauthorize%3Fclient_id%3Ddd0b2de7-576f-44d7-8607-788ece271310%26redirect_uri%3Dhttps%253A%252F%252Fwww.heroku.com%252Fauth%252Fheroku%252Fcallback%26response_type%3Dcode%26scope%3Didentity%2Bread%26state%3Dcbeff6caa22dd3da82260d4764c9ad34d99bca10abeb5adb)
-7. Create a new application with a unique name.
-8. In Application Dashboard, navigate to the deploy section and connect to your Git account and then to your Repository.
-9. Select the branch for master or main and enable automatic deploys.
-10. Set the config variables in the Settings section.
-11. Set key/value pairs for the following keys: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
-12. Navigate to the dashboard and trigger the deployment.
-13. When the deployment has been successful, click on "Open App".
+7. On your dashboard, select "Create New App".
+<img src="mini_tales/static/images/readme/deployment/heroku/new_app.JPG">
+
+8. Set a unique name and select the closest region to you. Select "Create App".
+<img src="mini_tales/static/images/readme/deployment/heroku/create_app.JPG">
+
+8. In Application Dashboard, navigate to the deploy section and connect to your Git account,then to your Repository. Select "Connect" (After connecting the section should look like the image below).
+<img src="mini_tales/static/images/readme/deployment/heroku/connect_repo.JPG">
+
+9. Navigate to the "Settings" tab.
+<img src="mini_tales/static/images/readme/deployment/heroku/settings.JPG">
+
+10. Select "Reveal Config Vars" and set key/value pairs from env.py IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY.
+<img src="mini_tales/static/images/readme/deployment/heroku/config_vars.JPG">
+
+12. Navigate back to the "Deploy" tab.
+13. Select your branch then "Enable Automatic Deploys".
+<img src="mini_tales/static/images/readme/deployment/heroku/branch_auto_deploy.JPG">
+
+13. When the deployment has been successful, click on "Open App" in the top-right.
+<img src="mini_tales/static/images/readme/deployment/heroku/open_app.JPG">
 
 ## Credits
 
